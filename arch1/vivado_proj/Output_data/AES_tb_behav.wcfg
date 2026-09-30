@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="AES_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="AES_tb" />
+            <top_module name="aes_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="272.560 ns"></ZoomStartTime>
+      <ZoomEndTime time="707.061 ns"></ZoomEndTime>
+      <Cursor1Time time="314.560 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wave_markers>
+      <marker time="656250" label="" />
+   </wave_markers>
+   <wvobject fp_name="/AES_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/in_valid" type="logic">
+      <obj_property name="ElementShortName">in_valid</obj_property>
+      <obj_property name="ObjectShortName">in_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/out_valid" type="logic">
+      <obj_property name="ElementShortName">out_valid</obj_property>
+      <obj_property name="ObjectShortName">out_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/plaintext" type="array">
+      <obj_property name="ElementShortName">plaintext[127:0]</obj_property>
+      <obj_property name="ObjectShortName">plaintext[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/cipherkey" type="array">
+      <obj_property name="ElementShortName">cipherkey[255:0]</obj_property>
+      <obj_property name="ObjectShortName">cipherkey[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/ciphertext" type="array">
+      <obj_property name="ElementShortName">ciphertext[127:0]</obj_property>
+      <obj_property name="ObjectShortName">ciphertext[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/plaintext_tv" type="array">
+      <obj_property name="ElementShortName">plaintext_tv[127:0]</obj_property>
+      <obj_property name="ObjectShortName">plaintext_tv[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/cipherkey_tv" type="array">
+      <obj_property name="ElementShortName">cipherkey_tv[255:0]</obj_property>
+      <obj_property name="ObjectShortName">cipherkey_tv[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/expected_ciphertext" type="array">
+      <obj_property name="ElementShortName">expected_ciphertext[127:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_ciphertext[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/AES_tb/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+</wave_config>

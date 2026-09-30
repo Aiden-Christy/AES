@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Note: PASS: AES ciphertext matches FIPS-197 Appendix C.3 known-answer test
+Time: 60 ps  Iteration: 0  Process: /AES_tb/check  File: C:/Users/j48s677/Desktop/AES/arch2/testbench.vhd
+Failure: AES_tb complete -- stopping simulation.
+Time: 60 ps  Iteration: 0  Process: /AES_tb/check  File: C:/Users/j48s677/Desktop/AES/arch2/testbench.vhd
+$finish called at time : 60 ps : File "C:/Users/j48s677/Desktop/AES/arch2/testbench.vhd" Line 63

@@ -26,23 +26,6 @@ architecture AES_arch of AES is
     signal round_key : key_t;
 
 
-    -- Registers
-    -- Text Registers
-    signal round1  : state_t;
-    signal round2  : state_t;
-    signal round3  : state_t;
-    signal round4  : state_t;
-    signal round5  : state_t;
-    signal round6  : state_t;
-    signal round7  : state_t;
-    signal round8  : state_t;
-    signal round9  : state_t;
-    signal round10 : state_t;
-    signal round11 : state_t;
-    signal round12 : state_t;
-    signal round13 : state_t;
-
-
     begin
         
         pt_array <= to_state(plaintext);

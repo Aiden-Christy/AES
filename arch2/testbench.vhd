@@ -13,7 +13,7 @@ architecture sim of AES_tb is
     constant cipherkey_tv        : std_logic_vector(255 downto 0) := x"000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f";
     constant expected_ciphertext : std_logic_vector(127 downto 0) := x"8ea2b7ca516745bfeafc49904b496089";
 
-    constant clk_period : time := 31.25 ns;
+    constant clk_period : time := 10 ps;
 
     signal clk        : std_logic := '0';
     signal rst        : std_logic := '1';
@@ -50,7 +50,7 @@ begin
         cipherkey <= cipherkey_tv;
         in_valid  <= '1';
         rst       <= '0';
-        wait for clk_period * 20;
+        wait for clk_period * 5;
 
         if ciphertext = expected_ciphertext then
             report "PASS: AES ciphertext matches FIPS-197 Appendix C.3 known-answer test";
