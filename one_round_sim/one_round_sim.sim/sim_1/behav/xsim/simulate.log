@@ -1,0 +1,21 @@
+Time resolution is 1 ps
+Note: PASS: SubBytes matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: ShiftRows matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: MixColumns matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: AES_round output matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: AES_round_tb complete.
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: SubBytes matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: ShiftRows matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: MixColumns matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: PASS: AES_round output matches FIPS-197 round-1 trace
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd
+Note: AES_round_tb complete.
+Time: 10 ns  Iteration: 0  Process: /AES_round_tb/check  File: C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd

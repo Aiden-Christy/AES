@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/AES_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/AES_round.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AES_round'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/j48s677/Desktop/AES/one_round_sim/one_round_sim.srcs/sources_1/imports/AES/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AES_round_tb'

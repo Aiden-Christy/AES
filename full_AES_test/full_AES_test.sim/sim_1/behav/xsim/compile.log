@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/j48s677/Desktop/AES/AES.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AES'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/j48s677/Desktop/AES/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AES_tb'

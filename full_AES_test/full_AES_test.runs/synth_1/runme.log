@@ -1,0 +1,752 @@
+
+*** Running vivado
+    with args -log AES.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Sep 24 14:01:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source AES.tcl -notrace
+Command: synth_design -top AES -part xc7a200tfbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16264
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1083.684 ; gain = 538.172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AES' [C:/Users/j48s677/Desktop/AES/AES.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'AES' (0#1) [C:/Users/j48s677/Desktop/AES/AES.vhd:21]
+WARNING: [Synth 8-3848] Net out_valid in module/entity AES does not have driver. [C:/Users/j48s677/Desktop/AES/AES.vhd:12]
+WARNING: [Synth 8-7129] Port out_valid in module AES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_valid in module AES is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1399.941 ; gain = 854.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1399.941 ; gain = 854.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg484-1
+INFO: [Device 21-403] Loading part xc7a200tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1399.941 ; gain = 854.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1399.941 ; gain = 854.430
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      8 Bit         XORs := 102   
+	   2 Input      8 Bit         XORs := 759   
+	   4 Input      8 Bit         XORs := 56    
+	   5 Input      8 Bit         XORs := 50    
+	   6 Input      8 Bit         XORs := 1     
+	   7 Input      8 Bit         XORs := 1     
+	   8 Input      8 Bit         XORs := 1     
+	   9 Input      8 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 464   
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 208   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port out_valid in module AES is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_valid in module AES is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:49 ; elapsed = 00:01:57 . Memory (MB): peak = 1894.863 ; gain = 1349.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
+|AES         | sbox[0]    | 256x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:01:58 . Memory (MB): peak = 1902.695 ; gain = 1357.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:02:01 . Memory (MB): peak = 1936.699 ; gain = 1391.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |  2225|
+|3     |LUT3  |   542|
+|4     |LUT4  |   776|
+|5     |LUT5  |  1019|
+|6     |LUT6  |  9983|
+|7     |MUXF7 |  4380|
+|8     |MUXF8 |  1988|
+|9     |FDRE  |  3840|
+|10    |IBUF  |   386|
+|11    |OBUF  |   128|
+|12    |OBUFT |     1|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       | 25269|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:02:03 . Memory (MB): peak = 1944.438 ; gain = 1398.926
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1956.500 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6368 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'AES' is not ideal for floorplanning, since the cellview 'AES' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2024.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 672e9dec
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:57 ; elapsed = 00:02:08 . Memory (MB): peak = 2024.945 ; gain = 1484.391
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2024.945 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/j48s677/Desktop/AES/full_AES_test/full_AES_test.runs/synth_1/AES.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file AES_utilization_synth.rpt -pb AES_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 14:03:53 2026...
