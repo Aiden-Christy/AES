@@ -43,9 +43,8 @@ begin
         rst <= '1';
         wait for clk_period;
 
-        -- the whole cipher is combinational off plaintext/cipherkey, so it
-        -- settles within this same simulation time; the next rising edge
-        -- is enough for AES.vhd's "reset" process to latch it into ciphertext
+        -- the design takes one clock to load plus 14 rounds (one per clock),
+        -- so 20 clocks is plenty for ciphertext to hold the finished result
         plaintext <= plaintext_tv;
         cipherkey <= cipherkey_tv;
         in_valid  <= '1';

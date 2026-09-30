@@ -8,15 +8,11 @@ package AES_pkg is
     type word_t is array(0 to 3) of byte_t;
     type state_t is array(0 to 3) of word_t;
 
-    type key_t is array(0 to 14) of state_t;
-    
     type sbox_t is array(0 to 255) of byte_t;
     type rcon_table_t is array(1 to 10) of byte_t;
 
     function to_state(pt : std_logic_vector(127 downto 0)) return state_t;
     function from_state(s : state_t) return std_logic_vector;
-
-    function key_round(key : std_logic_vector(255 downto 0)) return key_t;
 
     function sub_byte(val : byte_t) return byte_t;
     function sub_bytes(s : state_t) return state_t;
@@ -26,7 +22,9 @@ package AES_pkg is
     function mix_columns(s : state_t) return state_t;
     function add_round_key(s : state_t; rk : state_t) return state_t;
 
-    function round(s : state_t; rk : state_t) return state_t;
+    function word_xor(a : word_t; b : word_t) return word_t;
+    function key_step(rk : state_t; rk_next : state_t; rcon_byte : byte_t; use_rot : std_logic) return state_t;
+    function rcon_for(cnt : unsigned(3 downto 0)) return byte_t;
 
 end package AES_pkg;
 
@@ -162,55 +160,83 @@ package body AES_pkg is
 
 
 
-    function round(s : state_t; rk : state_t) return state_t is
-        variable result : state_t;
-    begin 
-        result := mix_columns(shift_rows(sub_bytes(add_round_key(s, rk))));
+    -- XOR two 4-byte words together, byte by byte.
+    -- (XOR = "flip the bits of a wherever b has a 1")
+    function word_xor(a : word_t; b : word_t) return word_t is
+        variable result : word_t;
+    begin
+        for i in 0 to 3 loop
+            result(i) := a(i) xor b(i);
+        end loop;
         return result;
     end function;
 
 
-
-    function key_round(key : std_logic_vector(255 downto 0)) return key_t is
-        constant Nk : integer := 8;                    
-        constant Nb : integer := 4;                     
-        constant Nr : integer := 14;                     
-        type word_array_t is array(0 to Nb*(Nr+1) - 1) of word_t;
-
-        variable w      : word_array_t;
-        variable temp   : word_t;
-        variable key_hi : state_t := to_state(key(255 downto 128));
-        variable key_lo : state_t := to_state(key(127 downto 0));
-        variable result : key_t;
+    -- One step of the AES-256 key schedule, done "on the fly".
+    --
+    -- The big idea: the full key schedule makes all 60 words at once, which
+    -- needs a LOT of hardware. But every new word only ever looks back at most
+    -- 8 words. So if we just remember the last 8 words (two round keys: rk and
+    -- rk_next), we can make the next 4 words each clock cycle - exactly one
+    -- round key's worth - and throw away the old ones we don't need anymore.
+    --
+    -- Think of it like a conveyor belt 8 boxes long: every tick, the 4 oldest
+    -- boxes (rk) fall off the front, the other 4 (rk_next) slide forward, and
+    -- the 4 brand new boxes this function makes get put on the back.
+    --
+    -- The rule from the AES standard is:  w[i] = w[i-8] xor temp
+    --   - For the FIRST new word, temp is a scrambled copy of the newest word
+    --     we have (the last word of rk_next).
+    --   - For the other 3 new words, temp is just the word right before it.
+    --
+    -- How that newest word gets scrambled alternates every step:
+    --   - use_rot = '1': rotate the bytes, run them through the S-box, then
+    --     XOR in the round constant (rcon_byte).
+    --   - use_rot = '0': S-box only.
+    function key_step(rk : state_t; rk_next : state_t; rcon_byte : byte_t; use_rot : std_logic) return state_t is
+        variable t : word_t;
+        variable r : state_t;
     begin
-        
-        for c in 0 to 3 loop
-            w(c)     := key_hi(c);
-            w(c + 4) := key_lo(c);
-        end loop;
+        -- Start with the newest word we have.
+        t := rk_next(3);
 
-        for i in Nk to Nb*(Nr+1) - 1 loop
-            temp := w(i - 1);
+        -- Rotate it only on the steps that need it. We pick rotated vs. not
+        -- BEFORE the S-box so that only ONE sub_word (4 S-boxes) gets built
+        -- in hardware, instead of one for each case.
+        if use_rot = '1' then
+            t := rot_word(t);
+        end if;
 
-            if i mod Nk = 0 then
-                temp    := sub_word(rot_word(temp));
-                temp(0) := temp(0) xor rcon(i / Nk);
-            elsif i mod Nk = 4 then
-                temp := sub_word(temp);
-            end if;
+        -- Run all 4 bytes through the S-box (the AES "substitution" table).
+        t := sub_word(t);
 
-            for b in 0 to 3 loop
-                w(i)(b) := w(i - Nk)(b) xor temp(b);
-            end loop;
-        end loop;
+        -- On rotate steps, also mix in the round constant. It only touches
+        -- the first byte - it's there so every step is a little different.
+        if use_rot = '1' then
+            t(0) := t(0) xor rcon_byte;
+        end if;
 
-        for r in 0 to Nr loop
-            for c in 0 to Nb - 1 loop
-                result(r)(c) := w(4*r + c);
-            end loop;
-        end loop;
+        -- Make the 4 new words. Each one is
+        -- "the word 8 spots back" XOR "the word right before me".
+        r(0) := word_xor(rk(0), t);      -- w[i]   = w[i-8] xor temp
+        r(1) := word_xor(rk(1), r(0));   -- w[i+1] = w[i-7] xor w[i]
+        r(2) := word_xor(rk(2), r(1));   -- w[i+2] = w[i-6] xor w[i+1]
+        r(3) := word_xor(rk(3), r(2));   -- w[i+3] = w[i-5] xor w[i+2]
 
-        return result;
+        return r;
+    end function;
+
+
+    -- Which round constant to use, worked out from the round counter.
+    -- The constant only changes every OTHER round (it's only used on the
+    -- rotate steps), so we chop off the counter's lowest bit - that's the
+    -- same as dividing by 2 - and look it up in the rcon table:
+    --   cnt 0,1 -> rcon(1) = 01,  cnt 2,3 -> rcon(2) = 02,  ...  cnt 12,13 -> rcon(7) = 40
+    -- This is a tiny lookup instead of an 8-bit register that has to be
+    -- loaded and shifted.
+    function rcon_for(cnt : unsigned(3 downto 0)) return byte_t is
+    begin
+        return rcon(to_integer(cnt(3 downto 1)) + 1);
     end function;
 
 end package body AES_pkg;
