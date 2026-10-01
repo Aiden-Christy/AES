@@ -24,6 +24,12 @@ architecture AES_arch of AES is
     signal ct_array : state_t;
 
     signal round_key : key_t;
+    signal pt_reg    : state_t;
+
+    -- in_valid delayed by the pipeline depth:
+    -- pt_reg/round_key, round1..round13, ct_array, ciphertext = 16 registers
+    constant LATENCY : natural := 16;
+    signal valid_sr  : std_logic_vector(LATENCY - 1 downto 0);
 
 
     -- Registers
@@ -51,8 +57,9 @@ architecture AES_arch of AES is
         begin
             if rising_edge(clk) then
                 round_key <= key_round(cipherkey);
+                pt_reg    <= pt_array;
     
-                round1 <=  round(pt_array, round_key(0));
+                round1 <=  round(pt_reg, round_key(0));
                 round2 <=  round(round1, round_key(1));
                 round3 <=  round(round2, round_key(2));
                 round4 <=  round(round3, round_key(3));
@@ -74,11 +81,14 @@ architecture AES_arch of AES is
             if rising_edge(clk) then   
                 if rst = '1' then   
                     ciphertext <= (others => '0');
+                    valid_sr   <= (others => '0');
                 else   
                     ciphertext <= from_state(ct_array);
+                    valid_sr   <= valid_sr(LATENCY - 2 downto 0) & in_valid;
                 end if;
             end if;
         end process;
 
+        out_valid <= valid_sr(LATENCY - 1);
 
 end architecture;

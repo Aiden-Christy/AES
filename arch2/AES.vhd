@@ -55,8 +55,10 @@ architecture AES_arch of AES is
             if rising_edge(clk) then   
                 if rst = '1' then   
                     ciphertext <= (others => '0');
+                    out_valid <= '0';
                 else   
                     ciphertext <= from_state(ct_array);
+                    out_valid <= in_valid;
                 end if;
             end if;
         end process;
