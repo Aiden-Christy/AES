@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/aiden/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.runs/synth_1'
+HD_PWD='C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Oct  1 20:21:04 2026
+# Process ID         : 26364
+# Current directory  : C:/Users/j48s677/Desktop/AES/arch2/vivado_proj/AES_full_combinational/AES_full_combinational.runs/synth_1
+# Command line       : vivado.exe -log AES_testbench.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES_testbench.tcl
+# Log file           : C:/Users/j48s677/Desktop/AES/arch2/vivado_proj/AES_full_combinational/AES_full_combinational.runs/synth_1/AES_testbench.vds
+# Journal file       : C:/Users/j48s677/Desktop/AES/arch2/vivado_proj/AES_full_combinational/AES_full_combinational.runs/synth_1\vivado.jou
+# Running On         : BZ-ECE-BL-LAB01
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i9-14900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 66205 MB
+# Swap memory        : 66571 MB
+# Total Virtual      : 132777 MB
+# Available Virtual  : 108431 MB
+#-----------------------------------------------------------
+source AES_testbench.tcl -notrace

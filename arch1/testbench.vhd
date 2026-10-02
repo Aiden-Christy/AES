@@ -16,7 +16,7 @@ architecture sim of AES_tb is
     constant clk_period : time := 31.25 ns;
 
     signal clk        : std_logic := '0';
-    signal rst        : std_logic := '1';
+    signal rst_n      : std_logic := '0';   -- active low
     signal in_valid   : std_logic := '0';
     signal out_valid  : std_logic;
     signal plaintext  : std_logic_vector(127 downto 0) := (others => '0');
@@ -27,8 +27,8 @@ begin
 
     dut : entity work.AES
         port map (
-            clk        => clk,
-            rst        => rst,
+            i_clk      => clk,
+            i_reset_n  => rst_n,
             in_valid   => in_valid,
             out_valid  => out_valid,
             plaintext  => plaintext,
@@ -40,7 +40,7 @@ begin
 
     check : process
     begin
-        rst <= '1';
+        rst_n <= '0';
         wait for clk_period;
 
         -- the whole cipher is combinational off plaintext/cipherkey, so it
@@ -49,7 +49,7 @@ begin
         plaintext <= plaintext_tv;
         cipherkey <= cipherkey_tv;
         in_valid  <= '1';
-        rst       <= '0';
+        rst_n     <= '1';
         wait for clk_period * 20;
 
         if ciphertext = expected_ciphertext then

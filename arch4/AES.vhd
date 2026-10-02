@@ -18,14 +18,24 @@ use work.AES_pkg.all;
 --   ...
 --   cnt = 12: round 13 (uses round key k12)
 --   cnt = 13: round 14 (uses k13 and k14) -> ciphertext is ready
+--
+-- The key is loaded separately with key_load and kept in key_store. Only the
+-- 256-bit cipher key is stored, not all 15 round keys: the round keys are
+-- still made one per round from it, so the key hardware stays tiny.
 -------------------------------------------------------------------------------
 
 entity AES is
 port(
-    clk : in  std_logic;
-    rst : in std_logic;
+    i_clk     : in std_logic;
+    i_reset_n : in std_logic;   -- active low
 
-    in_valid : in std_logic;
+    -- Key interface: pulse key_load with cipherkey on the inputs. The key is
+    -- stored on that edge; key_valid stays high once a key has been loaded.
+    -- Don't load a new key while a block is being encrypted.
+    key_load  : in  std_logic;
+    key_valid : out std_logic;
+
+    in_valid : in std_logic;    -- ignored while key_valid = '0' or busy
     out_valid: out std_logic;
 
     plaintext : in std_logic_vector(127 downto 0);
@@ -45,6 +55,8 @@ architecture AES_arch of AES is
     signal rk_next   : state_t;              -- round key for the NEXT round
     signal cnt       : unsigned(3 downto 0); -- which round we're on (0 to 13)
     signal busy      : std_logic;            -- '1' while a block is being encrypted
+    signal key_store : std_logic_vector(255 downto 0);  -- cipher key from the last key_load
+    signal key_rdy   : std_logic;            -- '1' once a key has been loaded
 
     -- rk and rk_next together are the last 8 words of the key schedule. That
     -- is all the key memory we need: every new key word is built from words
@@ -70,21 +82,38 @@ begin
     ---------------------------------------------------------------------------
     t <= shift_rows(sub_bytes(add_round_key(state_reg, rk)));
 
+    key_valid <= key_rdy;
+
+    ---------------------------------------------------------------------------
+    -- Key store: grab the cipher key when key_load goes high.
+    ---------------------------------------------------------------------------
+    key_register : process (i_clk)
+    begin
+        if rising_edge(i_clk) then
+            if i_reset_n = '0' then
+                key_rdy <= '0';
+            elsif key_load = '1' then
+                key_store <= cipherkey;
+                key_rdy   <= '1';
+            end if;
+        end if;
+    end process;
+
     ---------------------------------------------------------------------------
     -- Data registers. These have NO reset on purpose: their values don't
     -- matter until a block gets loaded, and on Xilinx FPGAs, flip-flops without
     -- a reset pack together more tightly (= less area).
     ---------------------------------------------------------------------------
-    datapath : process (clk)
+    datapath : process (i_clk)
     begin
-        if rising_edge(clk) then
+        if rising_edge(i_clk) then
             if busy = '0' then
                 -- Waiting: keep loading whatever is on the inputs. It only
                 -- "counts" once in_valid starts the control logic below.
-                -- The key's top half is round key k0, the bottom half is k1.
+                -- The stored key's top half is round key k0, the bottom half is k1.
                 state_reg <= to_state(plaintext);
-                rk        <= to_state(cipherkey(255 downto 128));
-                rk_next   <= to_state(cipherkey(127 downto 0));
+                rk        <= to_state(key_store(255 downto 128));
+                rk_next   <= to_state(key_store(127 downto 0));
             else
                 -- Working: finish the round with MixColumns and feed the
                 -- result back into the round unit for next time.
@@ -111,18 +140,18 @@ begin
     -- starts in a known "idle" state when it powers up. cnt doesn't: it gets
     -- set to 0 every time a block starts anyway.
     ---------------------------------------------------------------------------
-    control : process (clk)
+    control : process (i_clk)
     begin
-        if rising_edge(clk) then
-            if rst = '1' then
+        if rising_edge(i_clk) then
+            if i_reset_n = '0' then
                 busy      <= '0';
                 out_valid <= '0';
             else
                 out_valid <= '0';            -- out_valid is a 1-cycle "done!" blip
 
                 if busy = '0' then
-                    -- Idle: start when a new block shows up.
-                    if in_valid = '1' then
+                    -- Idle: start when a new block shows up (and we have a key).
+                    if in_valid = '1' and key_rdy = '1' then
                         busy <= '1';
                         cnt  <= (others => '0');
                     end if;

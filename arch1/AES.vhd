@@ -4,11 +4,18 @@ use ieee.numeric_std.all;
 use work.AES_pkg.all;
 
 entity AES is
-port( 
-    clk : in  std_logic;
-    rst : in std_logic;
+port(
+    i_clk     : in std_logic;
+    i_reset_n : in std_logic;   -- active low
 
-    in_valid : in std_logic;
+    -- Key interface: pulse key_load with cipherkey on the inputs. The key
+    -- schedule is recomputed and stored on that edge; key_valid stays high
+    -- once a key has been loaded. Don't load a new key while blocks are
+    -- still in the pipeline - they would finish with the new round keys.
+    key_load  : in  std_logic;
+    key_valid : out std_logic;
+
+    in_valid : in std_logic;    -- ignored while key_valid = '0'
     out_valid: out std_logic;
 
     plaintext : in std_logic_vector(127 downto 0);
@@ -22,12 +29,14 @@ architecture AES_arch of AES is
 
     signal pt_array : state_t;
     signal ct_array : state_t;
+    signal pt_reg   : state_t;
 
+    -- Stored key schedule, shared by every pipeline stage
     signal round_key : key_t;
-    signal pt_reg    : state_t;
+    signal key_rdy   : std_logic;
 
     -- in_valid delayed by the pipeline depth:
-    -- pt_reg/round_key, round1..round13, ct_array, ciphertext = 16 registers
+    -- pt_reg, round1..round13, ct_array, ciphertext = 16 registers
     constant LATENCY : natural := 16;
     signal valid_sr  : std_logic_vector(LATENCY - 1 downto 0);
 
@@ -50,15 +59,29 @@ architecture AES_arch of AES is
 
 
     begin
-        
+
         pt_array <= to_state(plaintext);
-    
-        encrypt : process (clk)
+
+        key_valid <= key_rdy;
+
+        -- Recompute the whole key schedule when key_load goes high
+        key_expand : process (i_clk)
         begin
-            if rising_edge(clk) then
-                round_key <= key_round(cipherkey);
-                pt_reg    <= pt_array;
-    
+            if rising_edge(i_clk) then
+                if i_reset_n = '0' then
+                    key_rdy <= '0';
+                elsif key_load = '1' then
+                    round_key <= key_round(cipherkey);
+                    key_rdy   <= '1';
+                end if;
+            end if;
+        end process;
+
+        encrypt : process (i_clk)
+        begin
+            if rising_edge(i_clk) then
+                pt_reg <= pt_array;
+
                 round1 <=  round(pt_reg, round_key(0));
                 round2 <=  round(round1, round_key(1));
                 round3 <=  round(round2, round_key(2));
@@ -76,15 +99,15 @@ architecture AES_arch of AES is
             end if;
         end process;
 
-        reset : process (clk)
-        begin 
-            if rising_edge(clk) then   
-                if rst = '1' then   
+        reset : process (i_clk)
+        begin
+            if rising_edge(i_clk) then
+                if i_reset_n = '0' then
                     ciphertext <= (others => '0');
                     valid_sr   <= (others => '0');
-                else   
+                else
                     ciphertext <= from_state(ct_array);
-                    valid_sr   <= valid_sr(LATENCY - 2 downto 0) & in_valid;
+                    valid_sr   <= valid_sr(LATENCY - 2 downto 0) & (in_valid and key_rdy);
                 end if;
             end if;
         end process;

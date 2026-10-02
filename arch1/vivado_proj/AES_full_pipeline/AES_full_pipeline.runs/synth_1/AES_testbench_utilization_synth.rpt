@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Thu Oct  1 15:04:35 2026
-| Host         : Rodger running 64-bit major release  (build 9200)
+| Date         : Thu Oct  1 19:43:29 2026
+| Host         : BZ-ECE-BL-LAB01 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file AES_testbench_utilization_synth.rpt -pb AES_testbench_utilization_synth.pb
 | Design       : AES_testbench
 | Device       : xc7a200tfbg484-1
@@ -31,15 +31,15 @@ Table of Contents
 +-------------------------+-------+-------+------------+-----------+-------+
 |        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*             | 14222 |     0 |          0 |    134600 | 10.57 |
-|   LUT as Logic          | 14222 |     0 |          0 |    134600 | 10.57 |
+| Slice LUTs*             | 14020 |     0 |          0 |    134600 | 10.42 |
+|   LUT as Logic          | 14020 |     0 |          0 |    134600 | 10.42 |
 |   LUT as Memory         |     0 |     0 |          0 |     46200 |  0.00 |
-| Slice Registers         |  4376 |     0 |          0 |    269200 |  1.63 |
-|   Register as Flip Flop |  4376 |     0 |          0 |    269200 |  1.63 |
+| Slice Registers         |  4386 |     0 |          0 |    269200 |  1.63 |
+|   Register as Flip Flop |  4386 |     0 |          0 |    269200 |  1.63 |
 |   Register as Latch     |     0 |     0 |          0 |    269200 |  0.00 |
 | F7 Muxes                |  4385 |     0 |          0 |     67300 |  6.52 |
 | F8 Muxes                |  1988 |     0 |          0 |     33650 |  5.91 |
-| Unique Control Sets     |    11 |       |          0 |     33650 |  0.03 |
+| Unique Control Sets     |    27 |       |          0 |     33650 |  0.08 |
 +-------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -61,8 +61,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 4376  |          Yes |       Reset |            - |
+| 60    |          Yes |         Set |            - |
+| 4326  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,21 +151,22 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 7. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| LUT6     | 9984 |                 LUT |
-| MUXF7    | 4385 |               MuxFx |
-| FDRE     | 4376 |        Flop & Latch |
-| LUT2     | 2294 |                 LUT |
-| MUXF8    | 1988 |               MuxFx |
-| LUT5     | 1220 |                 LUT |
-| LUT4     |  836 |                 LUT |
-| LUT3     |  569 |                 LUT |
-| LUT1     |    2 |                 LUT |
-| IBUF     |    2 |                  IO |
-| BUFG     |    1 |               Clock |
-+----------+------+---------------------+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LUT6     | 10012 |                 LUT |
+| MUXF7    |  4385 |               MuxFx |
+| FDRE     |  4326 |        Flop & Latch |
+| LUT2     |  2236 |                 LUT |
+| MUXF8    |  1988 |               MuxFx |
+| LUT5     |  1045 |                 LUT |
+| LUT4     |   865 |                 LUT |
+| LUT3     |   543 |                 LUT |
+| FDSE     |    60 |        Flop & Latch |
+| LUT1     |     7 |                 LUT |
+| IBUF     |     2 |                  IO |
+| BUFG     |     1 |               Clock |
++----------+-------+---------------------+
 
 
 8. Black Boxes
