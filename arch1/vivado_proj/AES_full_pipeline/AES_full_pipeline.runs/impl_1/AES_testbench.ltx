@@ -22,7 +22,7 @@
                             "slave_index": 0,
                             "bscan_switch_index": 0
                         },
-                        "uuid": "23E7D65A79BC59F7BC47406C1714DFAE",
+                        "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
                         "pins": [
                             {
                                 "name": "probe0",
@@ -31,8 +31,41 @@
                                 "direction": "IN",
                                 "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 127,
+                                "rightIndex": 4,
                                 "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "rx_cnt",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "rx_cnt[4]"
+                                            },
+                                            {
+                                                "name": "rx_cnt[3]"
+                                            },
+                                            {
+                                                "name": "rx_cnt[2]"
+                                            },
+                                            {
+                                                "name": "rx_cnt[1]"
+                                            },
+                                            {
+                                                "name": "rx_cnt[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 127,
+                                "portIndex": 1,
                                 "nets": [
                                     {
                                         "name": "ciphertext",
@@ -427,30 +460,6 @@
                                 ]
                             },
                             {
-                                "name": "probe1",
-                                "id": 1,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": true,
-                                "leftIndex": 0,
-                                "rightIndex": 1,
-                                "portIndex": 1,
-                                "nets": [
-                                    {
-                                        "name": "key_idx",
-                                        "isBus": true,
-                                        "subnets": [
-                                            {
-                                                "name": "key_idx[1]"
-                                            },
-                                            {
-                                                "name": "key_idx[0]"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
                                 "name": "probe2",
                                 "id": 2,
                                 "type": "DATA_TRIGGER",
@@ -461,12 +470,36 @@
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "pt_idx",
+                                        "name": "pass_cnt",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "pt_idx[2]"
+                                                "name": "pass_cnt[2]"
                                             },
+                                            {
+                                                "name": "pass_cnt[1]"
+                                            },
+                                            {
+                                                "name": "pass_cnt[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "pt_idx",
+                                        "isBus": true,
+                                        "subnets": [
                                             {
                                                 "name": "pt_idx[1]"
                                             },
@@ -478,34 +511,26 @@
                                 ]
                             },
                             {
-                                "name": "probe3",
-                                "id": 3,
-                                "type": "DATA_TRIGGER",
-                                "direction": "IN",
-                                "isVector": false,
-                                "leftIndex": 0,
-                                "rightIndex": 0,
-                                "portIndex": 3,
-                                "nets": [
-                                    {
-                                        "name": "in_valid",
-                                        "isBus": false
-                                    }
-                                ]
-                            },
-                            {
                                 "name": "probe4",
                                 "id": 4,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 1,
                                 "portIndex": 4,
                                 "nets": [
                                     {
-                                        "name": "key_load",
-                                        "isBus": false
+                                        "name": "phase",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "phase[1]"
+                                            },
+                                            {
+                                                "name": "phase[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -520,7 +545,7 @@
                                 "portIndex": 5,
                                 "nets": [
                                     {
-                                        "name": "key_valid",
+                                        "name": "in_valid",
                                         "isBus": false
                                     }
                                 ]
@@ -534,6 +559,38 @@
                                 "leftIndex": 0,
                                 "rightIndex": 0,
                                 "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "key_load",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "key_valid",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
                                 "nets": [
                                     {
                                         "name": "out_valid",

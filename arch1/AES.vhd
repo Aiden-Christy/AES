@@ -8,10 +8,6 @@ port(
     i_clk     : in std_logic;
     i_reset_n : in std_logic;   -- active low
 
-    -- Key interface: pulse key_load with cipherkey on the inputs. The key
-    -- schedule is recomputed and stored on that edge; key_valid stays high
-    -- once a key has been loaded. Don't load a new key while blocks are
-    -- still in the pipeline - they would finish with the new round keys.
     key_load  : in  std_logic;
     key_valid : out std_logic;
 
@@ -31,14 +27,21 @@ architecture AES_arch of AES is
     signal ct_array : state_t;
     signal pt_reg   : state_t;
 
-    -- Stored key schedule, shared by every pipeline stage
-    signal round_key : key_t;
-    signal key_rdy   : std_logic;
-
     -- in_valid delayed by the pipeline depth:
     -- pt_reg, round1..round13, ct_array, ciphertext = 16 registers
     constant LATENCY : natural := 16;
     signal valid_sr  : std_logic_vector(LATENCY - 1 downto 0);
+
+    -- Stored key schedule, shared by every pipeline stage
+    signal round_key    : key_t;
+    signal key_rdy      : std_logic;
+    signal key_hold     : std_logic_vector(255 downto 0);
+    signal key_settle   : integer range 0 to LATENCY - 1 := 0;
+
+    type key_phase_t is (IDLE, EXPANDING);
+    signal key_phase : key_phase_t;
+
+
 
 
     -- Registers
@@ -58,24 +61,13 @@ architecture AES_arch of AES is
     signal round13 : state_t;
 
 
+
+
     begin
 
         pt_array <= to_state(plaintext);
 
         key_valid <= key_rdy;
-
-        -- Recompute the whole key schedule when key_load goes high
-        key_expand : process (i_clk)
-        begin
-            if rising_edge(i_clk) then
-                if i_reset_n = '0' then
-                    key_rdy <= '0';
-                elsif key_load = '1' then
-                    round_key <= key_round(cipherkey);
-                    key_rdy   <= '1';
-                end if;
-            end if;
-        end process;
 
         encrypt : process (i_clk)
         begin
@@ -98,6 +90,35 @@ architecture AES_arch of AES is
                 ct_array <= add_round_key(shift_rows(sub_bytes(add_round_key(round13, round_key(13)))), round_key(14));
             end if;
         end process;
+
+        key_logic : process (i_clk)
+        begin   
+            if rising_edge(i_clk) then
+                if i_reset_n = '0' then
+                    key_rdy <= '0';
+                    key_phase <= IDLE;
+                else
+                    case key_phase is
+                        when IDLE =>
+                            if key_load = '1' then
+                                key_rdy <= '0'; 
+                                key_hold <= cipherkey;
+                                key_settle <= 0;
+                                key_phase <= EXPANDING;
+                            end if;
+                        when EXPANDING =>          -- key_load ignored here
+                            if key_settle = LATENCY - 1 then
+                                round_key <= key_round(key_hold);
+                                key_rdy   <= '1';
+                                key_phase <= IDLE;
+                            else
+                                key_settle <= key_settle + 1;
+                            end if;
+                    end case;
+                end if;
+            end if;
+        end process;
+
 
         reset : process (i_clk)
         begin
