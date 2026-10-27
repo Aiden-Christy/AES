@@ -171,6 +171,7 @@ set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 15
 connect_debug_port u_ila_0/probe1 [get_nets [list {key_idx[0]} {key_idx[1]}]]
 
 
+
 create_debug_core u_ila_0 ila
 set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
 set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
@@ -183,40 +184,52 @@ set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
 set_property port_width 1 [get_debug_ports u_ila_0/clk]
 connect_debug_port u_ila_0/clk [get_nets [list i_clk_IBUF_BUFG]]
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 5 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {rx_cnt[0]} {rx_cnt[1]} {rx_cnt[2]} {rx_cnt[3]} {rx_cnt[4]}]]
+set_property port_width 3 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {pass_cnt[0]} {pass_cnt[1]} {pass_cnt[2]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 128 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {ciphertext[0]} {ciphertext[1]} {ciphertext[2]} {ciphertext[3]} {ciphertext[4]} {ciphertext[5]} {ciphertext[6]} {ciphertext[7]} {ciphertext[8]} {ciphertext[9]} {ciphertext[10]} {ciphertext[11]} {ciphertext[12]} {ciphertext[13]} {ciphertext[14]} {ciphertext[15]} {ciphertext[16]} {ciphertext[17]} {ciphertext[18]} {ciphertext[19]} {ciphertext[20]} {ciphertext[21]} {ciphertext[22]} {ciphertext[23]} {ciphertext[24]} {ciphertext[25]} {ciphertext[26]} {ciphertext[27]} {ciphertext[28]} {ciphertext[29]} {ciphertext[30]} {ciphertext[31]} {ciphertext[32]} {ciphertext[33]} {ciphertext[34]} {ciphertext[35]} {ciphertext[36]} {ciphertext[37]} {ciphertext[38]} {ciphertext[39]} {ciphertext[40]} {ciphertext[41]} {ciphertext[42]} {ciphertext[43]} {ciphertext[44]} {ciphertext[45]} {ciphertext[46]} {ciphertext[47]} {ciphertext[48]} {ciphertext[49]} {ciphertext[50]} {ciphertext[51]} {ciphertext[52]} {ciphertext[53]} {ciphertext[54]} {ciphertext[55]} {ciphertext[56]} {ciphertext[57]} {ciphertext[58]} {ciphertext[59]} {ciphertext[60]} {ciphertext[61]} {ciphertext[62]} {ciphertext[63]} {ciphertext[64]} {ciphertext[65]} {ciphertext[66]} {ciphertext[67]} {ciphertext[68]} {ciphertext[69]} {ciphertext[70]} {ciphertext[71]} {ciphertext[72]} {ciphertext[73]} {ciphertext[74]} {ciphertext[75]} {ciphertext[76]} {ciphertext[77]} {ciphertext[78]} {ciphertext[79]} {ciphertext[80]} {ciphertext[81]} {ciphertext[82]} {ciphertext[83]} {ciphertext[84]} {ciphertext[85]} {ciphertext[86]} {ciphertext[87]} {ciphertext[88]} {ciphertext[89]} {ciphertext[90]} {ciphertext[91]} {ciphertext[92]} {ciphertext[93]} {ciphertext[94]} {ciphertext[95]} {ciphertext[96]} {ciphertext[97]} {ciphertext[98]} {ciphertext[99]} {ciphertext[100]} {ciphertext[101]} {ciphertext[102]} {ciphertext[103]} {ciphertext[104]} {ciphertext[105]} {ciphertext[106]} {ciphertext[107]} {ciphertext[108]} {ciphertext[109]} {ciphertext[110]} {ciphertext[111]} {ciphertext[112]} {ciphertext[113]} {ciphertext[114]} {ciphertext[115]} {ciphertext[116]} {ciphertext[117]} {ciphertext[118]} {ciphertext[119]} {ciphertext[120]} {ciphertext[121]} {ciphertext[122]} {ciphertext[123]} {ciphertext[124]} {ciphertext[125]} {ciphertext[126]} {ciphertext[127]}]]
+set_property port_width 2 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {pt_idx[0]} {pt_idx[1]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-set_property port_width 3 [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list {pass_cnt[0]} {pass_cnt[1]} {pass_cnt[2]}]]
+set_property port_width 2 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {phase[0]} {phase[1]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-set_property port_width 2 [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list {pt_idx[0]} {pt_idx[1]}]]
+set_property port_width 128 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {decrypted[0]} {decrypted[1]} {decrypted[2]} {decrypted[3]} {decrypted[4]} {decrypted[5]} {decrypted[6]} {decrypted[7]} {decrypted[8]} {decrypted[9]} {decrypted[10]} {decrypted[11]} {decrypted[12]} {decrypted[13]} {decrypted[14]} {decrypted[15]} {decrypted[16]} {decrypted[17]} {decrypted[18]} {decrypted[19]} {decrypted[20]} {decrypted[21]} {decrypted[22]} {decrypted[23]} {decrypted[24]} {decrypted[25]} {decrypted[26]} {decrypted[27]} {decrypted[28]} {decrypted[29]} {decrypted[30]} {decrypted[31]} {decrypted[32]} {decrypted[33]} {decrypted[34]} {decrypted[35]} {decrypted[36]} {decrypted[37]} {decrypted[38]} {decrypted[39]} {decrypted[40]} {decrypted[41]} {decrypted[42]} {decrypted[43]} {decrypted[44]} {decrypted[45]} {decrypted[46]} {decrypted[47]} {decrypted[48]} {decrypted[49]} {decrypted[50]} {decrypted[51]} {decrypted[52]} {decrypted[53]} {decrypted[54]} {decrypted[55]} {decrypted[56]} {decrypted[57]} {decrypted[58]} {decrypted[59]} {decrypted[60]} {decrypted[61]} {decrypted[62]} {decrypted[63]} {decrypted[64]} {decrypted[65]} {decrypted[66]} {decrypted[67]} {decrypted[68]} {decrypted[69]} {decrypted[70]} {decrypted[71]} {decrypted[72]} {decrypted[73]} {decrypted[74]} {decrypted[75]} {decrypted[76]} {decrypted[77]} {decrypted[78]} {decrypted[79]} {decrypted[80]} {decrypted[81]} {decrypted[82]} {decrypted[83]} {decrypted[84]} {decrypted[85]} {decrypted[86]} {decrypted[87]} {decrypted[88]} {decrypted[89]} {decrypted[90]} {decrypted[91]} {decrypted[92]} {decrypted[93]} {decrypted[94]} {decrypted[95]} {decrypted[96]} {decrypted[97]} {decrypted[98]} {decrypted[99]} {decrypted[100]} {decrypted[101]} {decrypted[102]} {decrypted[103]} {decrypted[104]} {decrypted[105]} {decrypted[106]} {decrypted[107]} {decrypted[108]} {decrypted[109]} {decrypted[110]} {decrypted[111]} {decrypted[112]} {decrypted[113]} {decrypted[114]} {decrypted[115]} {decrypted[116]} {decrypted[117]} {decrypted[118]} {decrypted[119]} {decrypted[120]} {decrypted[121]} {decrypted[122]} {decrypted[123]} {decrypted[124]} {decrypted[125]} {decrypted[126]} {decrypted[127]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
-set_property port_width 2 [get_debug_ports u_ila_0/probe4]
-connect_debug_port u_ila_0/probe4 [get_nets [list {phase[0]} {phase[1]}]]
+set_property port_width 128 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {ciphertext[0]} {ciphertext[1]} {ciphertext[2]} {ciphertext[3]} {ciphertext[4]} {ciphertext[5]} {ciphertext[6]} {ciphertext[7]} {ciphertext[8]} {ciphertext[9]} {ciphertext[10]} {ciphertext[11]} {ciphertext[12]} {ciphertext[13]} {ciphertext[14]} {ciphertext[15]} {ciphertext[16]} {ciphertext[17]} {ciphertext[18]} {ciphertext[19]} {ciphertext[20]} {ciphertext[21]} {ciphertext[22]} {ciphertext[23]} {ciphertext[24]} {ciphertext[25]} {ciphertext[26]} {ciphertext[27]} {ciphertext[28]} {ciphertext[29]} {ciphertext[30]} {ciphertext[31]} {ciphertext[32]} {ciphertext[33]} {ciphertext[34]} {ciphertext[35]} {ciphertext[36]} {ciphertext[37]} {ciphertext[38]} {ciphertext[39]} {ciphertext[40]} {ciphertext[41]} {ciphertext[42]} {ciphertext[43]} {ciphertext[44]} {ciphertext[45]} {ciphertext[46]} {ciphertext[47]} {ciphertext[48]} {ciphertext[49]} {ciphertext[50]} {ciphertext[51]} {ciphertext[52]} {ciphertext[53]} {ciphertext[54]} {ciphertext[55]} {ciphertext[56]} {ciphertext[57]} {ciphertext[58]} {ciphertext[59]} {ciphertext[60]} {ciphertext[61]} {ciphertext[62]} {ciphertext[63]} {ciphertext[64]} {ciphertext[65]} {ciphertext[66]} {ciphertext[67]} {ciphertext[68]} {ciphertext[69]} {ciphertext[70]} {ciphertext[71]} {ciphertext[72]} {ciphertext[73]} {ciphertext[74]} {ciphertext[75]} {ciphertext[76]} {ciphertext[77]} {ciphertext[78]} {ciphertext[79]} {ciphertext[80]} {ciphertext[81]} {ciphertext[82]} {ciphertext[83]} {ciphertext[84]} {ciphertext[85]} {ciphertext[86]} {ciphertext[87]} {ciphertext[88]} {ciphertext[89]} {ciphertext[90]} {ciphertext[91]} {ciphertext[92]} {ciphertext[93]} {ciphertext[94]} {ciphertext[95]} {ciphertext[96]} {ciphertext[97]} {ciphertext[98]} {ciphertext[99]} {ciphertext[100]} {ciphertext[101]} {ciphertext[102]} {ciphertext[103]} {ciphertext[104]} {ciphertext[105]} {ciphertext[106]} {ciphertext[107]} {ciphertext[108]} {ciphertext[109]} {ciphertext[110]} {ciphertext[111]} {ciphertext[112]} {ciphertext[113]} {ciphertext[114]} {ciphertext[115]} {ciphertext[116]} {ciphertext[117]} {ciphertext[118]} {ciphertext[119]} {ciphertext[120]} {ciphertext[121]} {ciphertext[122]} {ciphertext[123]} {ciphertext[124]} {ciphertext[125]} {ciphertext[126]} {ciphertext[127]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
-set_property port_width 1 [get_debug_ports u_ila_0/probe5]
-connect_debug_port u_ila_0/probe5 [get_nets [list in_valid]]
+set_property port_width 5 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {rx_cnt[0]} {rx_cnt[1]} {rx_cnt[2]} {rx_cnt[3]} {rx_cnt[4]}]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
 set_property port_width 1 [get_debug_ports u_ila_0/probe6]
-connect_debug_port u_ila_0/probe6 [get_nets [list key_load]]
+connect_debug_port u_ila_0/probe6 [get_nets [list in_valid]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
 set_property port_width 1 [get_debug_ports u_ila_0/probe7]
-connect_debug_port u_ila_0/probe7 [get_nets [list key_valid]]
+connect_debug_port u_ila_0/probe7 [get_nets [list key_load]]
 create_debug_port u_ila_0 probe
 set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
 set_property port_width 1 [get_debug_ports u_ila_0/probe8]
-connect_debug_port u_ila_0/probe8 [get_nets [list out_valid]]
+connect_debug_port u_ila_0/probe8 [get_nets [list key_valid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list key_valid_d]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list out_valid]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list out_valid_d]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

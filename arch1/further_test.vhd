@@ -27,7 +27,7 @@ architecture harness of AES_testbench is
         0 => x"6bc1bee22e409f96e93d7e117393172a",  -- expect f3eed1bdb5d2a03c064b5a7e3db181f8
         1 => x"ae2d8a571e03ac9c9eb76fac45af8e51",  -- expect 591ccb10d410ed26dc5ba74a31362870
         2 => x"30c81c46a35ce411e5fbc1191a0a52ef",  -- expect b6ed21b99ca6f4f9f153e7b1beafed1d
-        3 => x"f69f2445df4f9b17ad2b417be66c3710"   -- expect 23304b7a39f9f3ff067d8d8f9e24ecc7
+        3 => x"12345678987654321deadfeedbaabeee"   -- expect 23304b7a39f9f3ff067d8d8f9e24ecc7
     );
 
     ---------------------------------------------------------------------------
@@ -47,6 +47,11 @@ architecture harness of AES_testbench is
     signal in_valid   : std_logic := '0';
     signal out_valid  : std_logic;
     signal ciphertext : std_logic_vector(127 downto 0);
+    
+    signal out_valid_d  : std_logic;
+    signal key_valid_d  : std_logic;
+    signal decrypted : std_logic_vector(127 downto 0);
+    
 
     ---------------------------------------------------------------------------
     -- Anti-trimming: without these, synthesis sees that many key/plaintext
@@ -70,6 +75,9 @@ architecture harness of AES_testbench is
     attribute mark_debug of out_valid  : signal is "true";
     attribute mark_debug of ciphertext : signal is "true";
     attribute mark_debug of phase      : signal is "true";
+    attribute mark_debug of out_valid_d      : signal is "true";
+    attribute mark_debug of key_valid_d      : signal is "true";
+    attribute mark_debug of decrypted      : signal is "true";
 
 begin
 
@@ -84,6 +92,19 @@ begin
             plaintext  => pt_reg,
             cipherkey  => key_reg,
             ciphertext => ciphertext
+        );
+        
+    dut2 : entity work.decrypt
+        port map(
+            i_clk       => i_clk,
+            i_reset_n   => i_reset_n,
+            key_load    => key_load,
+            key_valid   => key_valid_d,
+            in_valid    => out_valid,
+            out_valid   => out_valid_d,
+            ciphertext => ciphertext,
+            cipherkey  => key_reg,
+            plaintext  => decrypted
         );
 
     sequencer : process (i_clk)

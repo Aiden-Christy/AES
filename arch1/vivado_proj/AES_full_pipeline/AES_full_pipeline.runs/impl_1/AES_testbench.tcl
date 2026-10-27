@@ -109,12 +109,30 @@ set rc [catch {
   set_param chipscope.maxJobs 8
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.runs/impl_1/AES_testbench.dcp
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a200tfbg484-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.cache/wt [current_project]
   set_property parent.project_path C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.xpr [current_project]
   set_property ip_output_repo C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.runs/synth_1/AES_testbench.dcp
+OPTRACE "read constraints: implementation" START { }
+  read_xdc C:/Users/j48s677/Desktop/AES/arch1/vivado_proj/AES_full_pipeline/AES_full_pipeline.srcs/constrs_1/imports/resilient_hydra/constraints_hydra.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  link_design -top AES_testbench -part xc7a200tfbg484-1 
+OPTRACE "link_design" END { }
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

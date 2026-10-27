@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tfbg484-1" LaunchTime="1792527521" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES_testbench.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg484-1" LaunchTime="1793038649" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES_testbench.dcp">
   <File Type="PA-TCL" Name="AES_testbench.tcl"/>
   <File Type="REPORTS-TCL" Name="AES_testbench_reports.tcl"/>
   <File Type="RDS-RDS" Name="AES_testbench.vds"/>
@@ -18,6 +18,18 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../AES.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../decryption/decrypt_pkg.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../decryption/decrypt.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

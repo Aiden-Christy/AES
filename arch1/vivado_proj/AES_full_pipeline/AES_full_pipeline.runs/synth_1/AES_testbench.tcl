@@ -77,6 +77,8 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   C:/Users/j48s677/Desktop/AES/arch1/AES_pkg.vhd
   C:/Users/j48s677/Desktop/AES/arch1/AES.vhd
+  C:/Users/j48s677/Desktop/AES/decryption/decrypt_pkg.vhd
+  C:/Users/j48s677/Desktop/AES/decryption/decrypt.vhd
   C:/Users/j48s677/Desktop/AES/arch1/further_test.vhd
 }
 OPTRACE "Adding files" END { }

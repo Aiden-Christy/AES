@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date             : Tue Oct 20 14:23:31 2026
+| Date             : Mon Oct 26 12:29:54 2026
 | Host             : BZ-ECE-BL-LAB01 running 64-bit major release  (build 9200)
 | Command          : report_power -file AES_testbench_power_routed.rpt -pb AES_testbench_power_summary_routed.pb -rpx AES_testbench_power_routed.rpx
 | Design           : AES_testbench
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.017        |
+| Total On-Chip Power (W)  | 2.116        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.892        |
-| Device Static (W)        | 0.125        |
+| Dynamic (W)              | 1.982        |
+| Device Static (W)        | 0.134        |
 | Effective TJA (C/W)      | 2.5          |
-| Max Ambient (C)          | 82.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 79.8         |
+| Junction Temperature (C) | 30.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.056 |        4 |       --- |             --- |
-| Slice Logic              |     0.431 |    30740 |       --- |             --- |
-|   LUT as Logic           |     0.402 |    14873 |    133800 |           11.12 |
-|   F7/F8 Muxes            |     0.023 |     6242 |    133800 |            4.67 |
-|   Register               |     0.004 |     7388 |    267600 |            2.76 |
-|   LUT as Shift Register  |     0.002 |      236 |     46200 |            0.51 |
-|   CARRY4                 |    <0.001 |       57 |     33450 |            0.17 |
+| Clocks                   |     0.067 |        4 |       --- |             --- |
+| Slice Logic              |     0.685 |    45757 |       --- |             --- |
+|   LUT as Logic           |     0.650 |    23960 |    133800 |           17.91 |
+|   F7/F8 Muxes            |     0.027 |     7585 |    133800 |            5.67 |
+|   Register               |     0.005 |    10638 |    267600 |            3.98 |
+|   LUT as Shift Register  |     0.003 |      377 |     46200 |            0.82 |
+|   CARRY4                 |    <0.001 |       78 |     33450 |            0.23 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     46200 |            0.05 |
-|   Others                 |     0.000 |      332 |       --- |             --- |
-| Signals                  |     0.400 |    13907 |       --- |             --- |
-| Block RAM                |     0.005 |        5 |       365 |            1.37 |
+|   Others                 |     0.000 |      403 |       --- |             --- |
+| Signals                  |     0.907 |    26090 |       --- |             --- |
+| Block RAM                |     0.322 |       61 |       365 |           16.71 |
 | I/O                      |    <0.001 |        2 |       285 |            0.70 |
-| Static Power             |     0.125 |          |           |                 |
-| Total                    |     1.017 |          |           |                 |
+| Static Power             |     0.134 |          |           |                 |
+| Total                    |     2.116 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.925 |       0.891 |      0.033 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.998 |       1.958 |      0.040 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.031 |       0.000 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -84,7 +84,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.027 |       0.024 |      0.003 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -145,14 +145,15 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| AES_testbench            |     0.892 |
-|   dbg_hub                |     0.005 |
-|     inst                 |     0.005 |
-|       BSCANID.u_xsdbm_id |     0.005 |
-|   dut                    |     0.849 |
-|   u_ila_0                |     0.032 |
-|     inst                 |     0.032 |
-|       ila_core_inst      |     0.032 |
+| AES_testbench            |     1.982 |
+|   dbg_hub                |     0.004 |
+|     inst                 |     0.004 |
+|       BSCANID.u_xsdbm_id |     0.004 |
+|   dut                    |     0.760 |
+|   dut2                   |     1.168 |
+|   u_ila_0                |     0.046 |
+|     inst                 |     0.046 |
+|       ila_core_inst      |     0.046 |
 +--------------------------+-----------+
 
 

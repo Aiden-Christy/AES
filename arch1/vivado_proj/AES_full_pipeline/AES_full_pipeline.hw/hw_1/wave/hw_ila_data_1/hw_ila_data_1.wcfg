@@ -11,13 +11,13 @@
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
       <ZoomEndTime time="1,025"></ZoomEndTime>
-      <Cursor1Time time="129"></Cursor1Time>
+      <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="281"></ValueColumnWidth>
+      <ValueColumnWidth column_width="277"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="9" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="ciphertext" type="array">
@@ -78,6 +78,14 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">phase[1:0]</obj_property>
       <obj_property name="ObjectShortName">phase[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="decrypted" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">decrypted[127:0]</obj_property>
+      <obj_property name="ObjectShortName">decrypted[127:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

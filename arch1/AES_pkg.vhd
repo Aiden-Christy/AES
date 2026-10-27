@@ -35,7 +35,7 @@ package body AES_pkg is
     
     constant sbox : sbox_t := (
         -- sbox(row*16 + col) = S-box output for input byte 0x<row><col>
-        -- col:     0      1      2      3      4      5      6      7      8      9      a      b      c      d      e      f
+    -- col:0      1      2      3      4      5      6      7      8      9      a      b      c      d      e      f
         x"63", x"7c", x"77", x"7b", x"f2", x"6b", x"6f", x"c5", x"30", x"01", x"67", x"2b", x"fe", x"d7", x"ab", x"76", -- row 0
         x"ca", x"82", x"c9", x"7d", x"fa", x"59", x"47", x"f0", x"ad", x"d4", x"a2", x"af", x"9c", x"a4", x"72", x"c0", -- row 1
         x"b7", x"fd", x"93", x"26", x"36", x"3f", x"f7", x"cc", x"34", x"a5", x"e5", x"f1", x"71", x"d8", x"31", x"15", -- row 2
