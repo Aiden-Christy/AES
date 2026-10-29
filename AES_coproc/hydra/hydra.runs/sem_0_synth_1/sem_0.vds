@@ -1,0 +1,518 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Oct 27 13:46:36 2026
+# Process ID         : 16048
+# Current directory  : C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1
+# Command line       : vivado.exe -log sem_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sem_0.tcl
+# Log file           : C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1/sem_0.vds
+# Journal file       : C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1\vivado.jou
+# Running On         : BZ-ECE-BL-LAB01
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i9-14900K
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 66205 MB
+# Swap memory        : 66571 MB
+# Total Virtual      : 132777 MB
+# Available Virtual  : 100831 MB
+#-----------------------------------------------------------
+source sem_0.tcl -notrace
+Command: synth_design -top sem_0 -part xc7a200tfbg484-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23516
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1327.859 ; gain = 539.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sem_0' [c:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.gen/sources_1/ip/sem_0/synth/sem_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'RAMB18E1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6155] done synthesizing module 'RAMB18E1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6157] synthesizing module 'RAMB18E1__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6155] done synthesizing module 'RAMB18E1__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6157] synthesizing module 'FDP' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49323]
+INFO: [Synth 8-6155] done synthesizing module 'FDP' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49323]
+INFO: [Synth 8-6157] synthesizing module 'INV' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87488]
+INFO: [Synth 8-6155] done synthesizing module 'INV' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87488]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49383]
+INFO: [Synth 8-6157] synthesizing module 'LUT4' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'FD' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+INFO: [Synth 8-6155] done synthesizing module 'FD' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49155]
+INFO: [Synth 8-6157] synthesizing module 'FDE' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49297]
+INFO: [Synth 8-6155] done synthesizing module 'FDE' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49297]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT3' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49396]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized2' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized2' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized3' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized3' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized4' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized4' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT2' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6155] done synthesizing module 'LUT2' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized5' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized5' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT2__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6155] done synthesizing module 'LUT2__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized6' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized6' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104847]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:171315]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized7' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized7' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized8' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized8' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized2' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized2' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT2__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6155] done synthesizing module 'LUT2__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6157] synthesizing module 'LUT2__parameterized2' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6155] done synthesizing module 'LUT2__parameterized2' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95377]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized3' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized3' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'FDRSE' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49448]
+INFO: [Synth 8-6155] done synthesizing module 'FDRSE' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:49448]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized9' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized9' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'RAM16X1D' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:153917]
+INFO: [Synth 8-6155] done synthesizing module 'RAM16X1D' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:153917]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized10' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized10' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized11' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized11' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'RAM64X1S' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:154656]
+INFO: [Synth 8-6155] done synthesizing module 'RAM64X1S' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:154656]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized12' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized12' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized13' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized13' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'MUXF5' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104884]
+INFO: [Synth 8-6155] done synthesizing module 'MUXF5' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:104884]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized4' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized4' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized5' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized5' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized6' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized6' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized14' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized14' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized7' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized7' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95415]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized15' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized15' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized16' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized16' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized17' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized17' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'RAM32X1S' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:154341]
+INFO: [Synth 8-6155] done synthesizing module 'RAM32X1S' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:154341]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized18' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized18' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized19' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized19' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95457]
+INFO: [Synth 8-6157] synthesizing module 'RAMB18E1__parameterized1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6155] done synthesizing module 'RAMB18E1__parameterized1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:158900]
+INFO: [Synth 8-6155] done synthesizing module 'sem_0' (0#1) [c:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.gen/sources_1/ip/sem_0/synth/sem_0.v:53]
+INFO: [Synth 8-7129] Port icap_clk in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port sync_init in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_window in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[31] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[30] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[29] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[28] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[27] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[26] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[25] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[24] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[23] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[22] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[21] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[20] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[19] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[18] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[17] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[16] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[15] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[14] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[13] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[12] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[11] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[10] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[9] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[8] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[7] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[6] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[5] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[4] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[3] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[2] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[1] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port data_values[0] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port port_id[1] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port port_id[0] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port cselect in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port write_strobe in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port read_strobe in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[7] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[6] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[5] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[4] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[3] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[2] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[1] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port out_port[0] in module sem_v4_1_17_x7_sem_cbuffer is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_txfull in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[7] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[6] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[5] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[4] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[3] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[2] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[1] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[0] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxempty in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[31] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[30] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[29] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[28] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[27] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[26] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[25] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[24] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[23] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[22] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[21] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[20] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[19] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[18] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[17] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[16] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[15] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[14] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[13] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[12] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[11] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[10] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[9] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[8] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[7] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[6] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[5] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[4] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[3] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[2] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[1] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_tbladdr[0] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.023 ; gain = 668.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.023 ; gain = 668.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.023 ; gain = 668.980
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1457.023 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 190 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.gen/sources_1/ip/sem_0/synth/sem_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.gen/sources_1/ip/sem_0/synth/sem_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1524.352 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 111 instances were transformed.
+  FD => FDRE: 24 instances
+  FDE => FDRE: 2 instances
+  FDP => FDPE: 5 instances
+  FDR => FDRE: 30 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 10 instances
+  INV => LUT1: 5 instances
+  MUXF5 => LUT3: 9 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 8 instances
+  RAM32X1S => RAM32X1S (RAMS32): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1524.352 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.352 ; gain = 736.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.352 ; gain = 736.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.352 ; gain = 736.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.352 ; gain = 736.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               26 Bit    Registers := 3     
+	               17 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   2 Input   36 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 8     
+	   3 Input   11 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 15    
+	   6 Input    1 Bit        Muxes := 1     
+	  22 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port fetch_txfull in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[7] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[6] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[5] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[4] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[3] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[2] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[1] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxdata[0] in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Synth 8-7129] Port fetch_rxempty in module sem_v4_1_17_x7_sem_controller is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (controller_kcpsm3/int_capture_flop) is unused and will be removed from module sem_v4_1_17_x7_sem_controller.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1524.352 ; gain = 736.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------------------------+------------+---------------+----------------+
+|Module Name                   | RTL Object | Depth x Width | Implemented As | 
++------------------------------+------------+---------------+----------------+
+|sem_v4_1_17_x7_sem_controller | use_enhm   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | use_repl   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | has_clas   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | has_njct   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | use_enhm   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | use_repl   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | has_clas   | 32x1          | LUT            | 
+|sem_v4_1_17_x7_sem_controller | has_njct   | 32x1          | LUT            | 
++------------------------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
+-------NONE-------
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1647.176 ; gain = 859.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1692.352 ; gain = 904.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1692.352 ; gain = 904.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     8|
+|2     |INV      |     3|
+|3     |LUT1     |     5|
+|4     |LUT2     |    17|
+|5     |LUT3     |   151|
+|6     |LUT4     |    69|
+|7     |LUT5     |    59|
+|8     |LUT6     |    92|
+|9     |MUXCY    |    39|
+|10    |MUXF5    |     9|
+|11    |MUXF7    |     8|
+|12    |RAM16X1D |     8|
+|13    |RAM32X1S |    10|
+|14    |RAM64X1S |     8|
+|15    |RAMB18E1 |     3|
+|18    |XORCY    |    37|
+|19    |FD       |    24|
+|20    |FDE      |     2|
+|21    |FDP      |     5|
+|22    |FDR      |    29|
+|23    |FDRE     |   275|
+|24    |FDSE     |    19|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1913.457 ; gain = 1058.086
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1913.457 ; gain = 1125.414
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1913.457 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 193 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1928.941 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 113 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 15 instances
+  FD => FDRE: 24 instances
+  FDE => FDRE: 2 instances
+  FDP => FDPE: 5 instances
+  FDR => FDRE: 29 instances
+  INV => LUT1: 3 instances
+  MUXF5 => LUT3: 9 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 8 instances
+  RAM32X1S => RAM32X1S (RAMS32): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+Synth Design complete | Checksum: 5da00d2a
+INFO: [Common 17-83] Releasing license: Synthesis
+222 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1928.941 ; gain = 1374.910
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1928.941 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1/sem_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP sem_0, cache-ID = 95f70b734a3abb39
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1928.941 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/j48s677/Desktop/AES/AES_coproc/hydra/hydra.runs/sem_0_synth_1/sem_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sem_0_utilization_synth.rpt -pb sem_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 27 13:47:06 2026...

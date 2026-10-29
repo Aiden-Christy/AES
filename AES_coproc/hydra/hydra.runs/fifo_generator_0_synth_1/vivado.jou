@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Mar  4 11:48:33 2026
+# Process ID         : 612795
+# Current directory  : /home/kris/Documents/Github/radpc-core/vivado/proj/radpc_hydra/radpc_hydra.runs/fifo_generator_0_synth_1
+# Command line       : vivado -log fifo_generator_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_0.tcl
+# Log file           : /home/kris/Documents/Github/radpc-core/vivado/proj/radpc_hydra/radpc_hydra.runs/fifo_generator_0_synth_1/fifo_generator_0.vds
+# Journal file       : /home/kris/Documents/Github/radpc-core/vivado/proj/radpc_hydra/radpc_hydra.runs/fifo_generator_0_synth_1/vivado.jou
+# Running On         : kris-XPS-8940
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) i9-10900K CPU @ 3.70GHz
+# CPU Frequency      : 4900.591 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 20
+# Host memory        : 67144 MB
+# Swap memory        : 0 MB
+# Total Virtual      : 67144 MB
+# Available Virtual  : 61543 MB
+#-----------------------------------------------------------
+source fifo_generator_0.tcl -notrace
