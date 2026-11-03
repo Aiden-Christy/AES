@@ -71,12 +71,12 @@ int main(){
         // before starting sleep to wait for key expansion
         delay(1000);
 
-        HWA_CTRL = AES_ENCRYPT;
+        HWA_CTRL = AES_DECRYPT;
 
         // Infinite loop
         while(1) {
 
-                uint32_t pt[4] =  {0x6bc1bee2, 0x2e409f96, 0xe93d7e11, 0x7393172a};
+                uint32_t pt[4] =  {0xF3EED1BD, 0xB5D2A03C, 0x64B5A7E, 0x3DB181F8};
                 
                 HWA_WRITE_00 = pt[0];
                 HWA_WRITE_01 = pt[1];
