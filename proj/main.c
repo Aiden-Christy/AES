@@ -69,7 +69,9 @@ int main(){
 
         
         // before starting sleep to wait for key expansion
-        sleep(2);
+        delay(1000);
+
+        HWA_CTRL = AES_ENCRYPT;
 
         // Infinite loop
         while(1) {
@@ -90,7 +92,7 @@ int main(){
                 delay( del_val );
 
                 if (HWA_READ_07 & AES_OUT_VALID) {
-                        rpc_printf(0, "0x%x 0x%x 0x%x 0x%x", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                        rpc_printf(0, "0x%x 0x%x 0x%x 0x%x \n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
                 }
                 
         };

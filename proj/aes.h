@@ -4,7 +4,6 @@
 #include "radpc.h"
 #include "hwa.h"
 
-#include <stdarg.h>
 #include <stdint.h>
 
 
@@ -19,3 +18,5 @@
 #define AES_OUT_VALID   BIT_1
 
 #define AES_TIMEOUT     100000
+
+#endif 
