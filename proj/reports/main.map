@@ -1,0 +1,220 @@
+
+Merging object attributes
+
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/crt0.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/crt0.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/crt0.o
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/crtn.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/crtn.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/crtn.o
+ .riscv.attributes
+                0x00000000       0x1a /opt/radpc/drivers/lib/crtn.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
+ .comment       0x00000000       0x10 /opt/radpc/drivers/lib/csr.o
+ .note.GNU-stack
+                0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
+ .riscv.attributes
+                0x00000000       0x1c /opt/radpc/drivers/lib/csr.o
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/interrupt.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/interrupt.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/interrupt.o
+ .sdata.SPI_PACKET
+                0x00000000        0x3 /opt/radpc/drivers/lib/interrupt.o
+ .sbss.SPI_RX_PACKET
+                0x00000000        0x4 /opt/radpc/drivers/lib/interrupt.o
+ .sbss.position
+                0x00000000        0x4 /opt/radpc/drivers/lib/interrupt.o
+ .sbss.rx_pos   0x00000000        0x4 /opt/radpc/drivers/lib/interrupt.o
+ .text.enable_interrupts
+                0x00000000       0x44 /opt/radpc/drivers/lib/interrupt.o
+ .text.determine_mcause
+                0x00000000       0x9c /opt/radpc/drivers/lib/interrupt.o
+ .text.machine_timer_interrupt
+                0x00000000       0x24 /opt/radpc/drivers/lib/interrupt.o
+ .text.machine_external_interrupt
+                0x00000000       0x24 /opt/radpc/drivers/lib/interrupt.o
+ .comment       0x00000000       0x10 /opt/radpc/drivers/lib/interrupt.o
+ .note.GNU-stack
+                0x00000000        0x0 /opt/radpc/drivers/lib/interrupt.o
+ .riscv.attributes
+                0x00000000       0x20 /opt/radpc/drivers/lib/interrupt.o
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/nor_mem.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/nor_mem.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_spi_wait_not_done
+                0x00000000       0x44 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_spi_set_packet_size
+                0x00000000       0x3c /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_spi_tx
+                0x00000000       0x3c /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_spi_rx
+                0x00000000       0x34 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_spi_xfer
+                0x00000000       0x50 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_init_default
+                0x00000000       0xa8 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_read_status
+                0x00000000       0x70 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_wait_ready
+                0x00000000       0x78 /opt/radpc/drivers/lib/nor_mem.o
+ .rodata        0x00000000        0x4 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_write_enable
+                0x00000000       0x94 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_read_jedec_id
+                0x00000000       0xc0 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_read_electronic_id
+                0x00000000       0x94 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_read
+                0x00000000      0x160 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_page_program
+                0x00000000      0x158 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_write
+                0x00000000       0xec /opt/radpc/drivers/lib/nor_mem.o
+ .text.erase_common
+                0x00000000       0xbc /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_erase_4k
+                0x00000000       0x44 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_erase_32k
+                0x00000000       0x44 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_erase_64k
+                0x00000000       0x44 /opt/radpc/drivers/lib/nor_mem.o
+ .text.nor_chip_erase
+                0x00000000       0x68 /opt/radpc/drivers/lib/nor_mem.o
+ .comment       0x00000000       0x10 /opt/radpc/drivers/lib/nor_mem.o
+ .note.GNU-stack
+                0x00000000        0x0 /opt/radpc/drivers/lib/nor_mem.o
+ .riscv.attributes
+                0x00000000       0x1c /opt/radpc/drivers/lib/nor_mem.o
+ .text          0x00000000        0x0 /opt/radpc/drivers/lib/radpc.o
+ .data          0x00000000        0x0 /opt/radpc/drivers/lib/radpc.o
+ .bss           0x00000000        0x0 /opt/radpc/drivers/lib/radpc.o
+ .text.i2c_send_byte
+                0x00000000      0x194 /opt/radpc/drivers/lib/radpc.o
+ .text.i2c_send_bytes
+                0x00000000      0x1f8 /opt/radpc/drivers/lib/radpc.o
+ .text.i2c_receive_bytes
+                0x00000000      0x21c /opt/radpc/drivers/lib/radpc.o
+ .text.rpc_fgets
+                0x00000000      0x194 /opt/radpc/drivers/lib/radpc.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+BOOTROM          0x00000000         0x00000400         xr
+IMEM             0x10000000         0x00003000         xrw
+DMEM             0x20000000         0x00003000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /opt/radpc/drivers/lib/crt0.o
+LOAD /opt/radpc/drivers/lib/crtn.o
+LOAD main.o
+LOAD /opt/radpc/drivers/lib/csr.o
+LOAD /opt/radpc/drivers/lib/interrupt.o
+LOAD /opt/radpc/drivers/lib/nor_mem.o
+LOAD /opt/radpc/drivers/lib/radpc.o
+
+.boot           0x00000000      0x240
+                0x00000000                        __start_text = .
+ *(.text.bootload)
+ .text.bootload
+                0x00000000      0x240 /opt/radpc/drivers/lib/crt0.o
+                0x00000000                _start
+ *(.text.exit)
+
+.text           0x10000000        0xe
+ *(.text)
+ *(.rodata)
+ .rodata        0x10000000        0xe main.o
+                0x1000000e                        __end_text = .
+
+.text.main      0x10000010      0x12c
+ .text.main     0x10000010      0x12c main.o
+                0x10000010                main
+
+.text.interrupt
+                0x1000013c       0x24
+ .text.interrupt
+                0x1000013c       0x24 main.o
+                0x1000013c                interrupt
+
+.text.delay     0x10000160       0x6c
+ .text.delay    0x10000160       0x6c /opt/radpc/drivers/lib/radpc.o
+                0x10000160                delay
+
+.text.uart_tx_byte
+                0x100001cc      0x114
+ .text.uart_tx_byte
+                0x100001cc      0x114 /opt/radpc/drivers/lib/radpc.o
+                0x100001cc                uart_tx_byte
+
+.text.rpc_printf
+                0x100002e0      0x2fc
+ .text.rpc_printf
+                0x100002e0      0x2fc /opt/radpc/drivers/lib/radpc.o
+                0x100002e0                rpc_printf
+
+.rela.dyn       0x100005dc        0x0
+ .rela.text.bootload
+                0x100005dc        0x0 /opt/radpc/drivers/lib/crt0.o
+
+.data           0x20000000        0x0
+                0x20000000                        __start_data = .
+ *(.data)
+ *(.sdata)
+                0x20000000                        __end_data = .
+
+.sdata.del_val  0x20000000        0x4
+ .sdata.del_val
+                0x20000000        0x4 main.o
+                0x20000000                del_val
+
+.data.digits.0  0x20000004       0x11
+ .data.digits.0
+                0x20000004       0x11 /opt/radpc/drivers/lib/radpc.o
+
+.bss            0x20000015        0x0
+                0x20000015                        __start_bss = .
+ *(.bss)
+                0x20000015                        __end_bss = .
+                [!provide]                        PROVIDE (__start_bootrom = ORIGIN (BOOTROM))
+                [!provide]                        PROVIDE (__end_bootrom = (ORIGIN (BOOTROM) + LENGTH (BOOTROM)))
+                0x10000000                        PROVIDE (__start_imem = ORIGIN (IMEM))
+                0x10003000                        PROVIDE (__end_imem = (ORIGIN (IMEM) + LENGTH (IMEM)))
+                0x20000000                        PROVIDE (__start_dmem = ORIGIN (DMEM))
+                0x20003000                        PROVIDE (__end_dmem = (ORIGIN (DMEM) + LENGTH (DMEM)))
+                0x20001800                        PROVIDE (__global_pointer = (__start_dmem + (LENGTH (DMEM) / 0x2)))
+                0x20003000                        PROVIDE (__stack_pointer = __end_dmem)
+                0x40000000                        PROVIDE (__boot_base_addr = 0x40000000)
+OUTPUT(main elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x20
+ .riscv.attributes
+                0x00000000       0x1e /opt/radpc/drivers/lib/crt0.o
+ .riscv.attributes
+                0x0000001e       0x1c main.o
+ .riscv.attributes
+                0x0000003a       0x1c /opt/radpc/drivers/lib/radpc.o
+
+.comment        0x00000000        0xf
+ .comment       0x00000000        0xf main.o
+                                 0x10 (size before relaxing)
+ .comment       0x0000000f        0x0 /opt/radpc/drivers/lib/radpc.o
+                                 0x10 (size before relaxing)
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 main.o
+ .note.GNU-stack
+                0x00000000        0x0 /opt/radpc/drivers/lib/radpc.o
