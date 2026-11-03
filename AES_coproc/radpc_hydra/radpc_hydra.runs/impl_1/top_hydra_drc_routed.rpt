@@ -1,0 +1,678 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Oct 29 13:40:51 2026
+| Host         : BZ-ECE-BL-LAB01 running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_hydra_drc_routed.rpt -pb top_hydra_drc_routed.pb -rpx top_hydra_drc_routed.rpx
+| Design       : top_hydra
+| Device       : xc7a200tfbg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 110
++-------------+----------+-------------------------------------------------------------+--------+
+| Rule        | Severity | Description                                                 | Checks |
++-------------+----------+-------------------------------------------------------------+--------+
+| CHECK-3     | Warning  | Report rule limit reached                                   | 2      |
+| PDRC-153    | Warning  | Gated clock check                                           | 58     |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 10     |
+| REQP-1839   | Warning  | RAMB36 async control check                                  | 20     |
+| REQP-1840   | Warning  | RAMB18 async control check                                  | 20     |
++-------------+----------+-------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1839 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+CHECK-3#2 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/o_miso_reg_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/o_miso_reg_LDC_i_1__2/O, cell RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/o_miso_reg_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__2/O, cell RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__3_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__3/O, cell RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_ready is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_ready_reg_i_2__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_ready_reg_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[0] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[0]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[0]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[1] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[1]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[1]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[2] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[2]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[2]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[3] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[3]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[3]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[4] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[4]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[4]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[5] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[5]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[5]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[6] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[6]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[6]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift__0[7] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[7]_i_2__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rx_shift_reg[7]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rxbuf_reg[7]_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rxbuf_reg[7]_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_rxbuf_reg[7]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_scl_clk_reg_i_2__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_scl_clk_reg_i_2__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_scl_clk_reg_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_tx_ready__0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_tx_ready_reg_i_2__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_00.I2C_00/I2C_00/r_tx_ready_reg_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/CLOCK_PROCESS.cur_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_ready is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_ready_reg_i_2/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_ready_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[0] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[0]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[0]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[1] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[1]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[2] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[2]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[2]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[3] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[3]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[3]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[4] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[4]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[5] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[5]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[6] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[6]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[6]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift__0[7] is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[7]_i_2/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rx_shift_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rxbuf_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rxbuf_reg[7]_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_rxbuf_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_scl_clk_reg_i_2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_scl_clk_reg_i_2/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_scl_clk_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_tx_ready__0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_tx_ready_reg_i_2/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_I2C_01.I2C_01/I2C_00/r_tx_ready_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/o_miso_reg_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/o_miso_reg_LDC_i_1__1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/o_miso_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__2/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/w_spi_clk_reg_LDC_i_1__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/o_miso_reg_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/o_miso_reg_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/o_miso_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/w_spi_clk_reg_LDC_i_1__1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/w_spi_clk_reg_LDC_i_1__1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/w_spi_clk_reg_LDC_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/o_miso_reg_LDC_i_1__3_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/o_miso_reg_LDC_i_1__3/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/o_miso_reg_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__3_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__3/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_out_count_reg[0]_LDC_i_1__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/w_spi_clk_reg_LDC_i_1__4_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/w_spi_clk_reg_LDC_i_1__4/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/w_spi_clk_reg_LDC_i_1__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/o_miso_reg_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/o_miso_reg_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/o_miso_reg_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_out_count_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_out_count_reg[0]_LDC_i_1/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_out_count_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1__0/O, cell RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/w_spi_clk_reg_LDC_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#49 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/PFC_00/w_sclk_i_00 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__0/O, cell RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#50 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/PFC_00/w_sclk_i_01 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__1/O, cell RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#51 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/PFC_00/w_sclk_i_02 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__2/O, cell RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#52 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/PFC_00/w_sclk_i_03 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__3/O, cell RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#53 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__0_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__0/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#54 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__1_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__1/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#55 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__2/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#56 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__3_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__3/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#57 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__4_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__4/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__4. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#58 Warning
+Gated clock check  
+Net RADPC_01/REACH_00/MMU_01/r_count[3]_i_2_n_0 is a gated clock net sourced by a combinational pin RADPC_01/REACH_00/MMU_01/r_count[3]_i_2/O, cell RADPC_01/REACH_00/MMU_01/r_count[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__0 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/o_miso_reg_C,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/o_miso_reg_P,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[4],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[5],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[6],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_rx_slv_buf_reg[7],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_in_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_in_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_in_count_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_in_count_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/r_slv_out_count_reg[0]_C
+ (the first 15 of 22 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__1 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/o_miso_reg_C,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/o_miso_reg_P,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[4],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[5],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[6],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_rx_slv_buf_reg[7],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_in_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_in_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_in_count_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_in_count_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/r_slv_out_count_reg[0]_C
+ (the first 15 of 22 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__2 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/o_miso_reg_C,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/o_miso_reg_P,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[4],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[5],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[6],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_rx_slv_buf_reg[7],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_in_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_in_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_in_count_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_in_count_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/r_slv_out_count_reg[0]_C
+ (the first 15 of 22 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/PFC_00/r_slv_in_count[3]_i_3__3 is driving clock pin of 22 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/o_miso_reg_C,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/o_miso_reg_P,
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[4],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[5],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[6],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_rx_slv_buf_reg[7],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_in_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_in_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_in_count_reg[2],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_in_count_reg[3],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/r_slv_out_count_reg[0]_C
+ (the first 15 of 22 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/GENERATE_FLASH.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__0 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_03.SPI_03/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__1 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_01.SPI_01/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__2 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_00.SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+PLHOLDVIO-2#9 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__3 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/BOOT_SPI_00/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+PLHOLDVIO-2#10 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT RADPC_01/REACH_00/MMU_01/r_count[3]_i_2__4 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/MTR_COUNT_00/r_count_reg[0],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/MTR_COUNT_00/r_count_reg[1],
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/MTR_COUNT_00/r_count_reg[2]
+RADPC_01/REACH_00/MMU_01/GENERATE_SPI_02.SPI_02/SPI_00/MTR_COUNT_00/r_count_reg[3]
+Related violations: <none>
+
+REQP-1839#1 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[10] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[7]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#2 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[11] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[8]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#3 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[12] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[9]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#4 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[13] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[10]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#5 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[11]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#6 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[3] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[0]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#7 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[4] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[1]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#8 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[5] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[2]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#9 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[6] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[3]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#10 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[7] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[4]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#11 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[8] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[5]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#12 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRARDADDR[9] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRARDADDR[6]) which is driven by a register (RADPC_01/DMEM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#13 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CSR_01/o_csr_data_read_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#14 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CSR_01/o_csr_data_read_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#15 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CSR_01/o_csr_data_read_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#16 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CSR_01/o_csr_data_read_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#17 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CSR_01/o_csr_data_read_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#18 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CTRL_UNIT_01/FSM_sequential_r_cur_state_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#19 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CTRL_UNIT_01/FSM_sequential_r_cur_state_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1839#20 Warning
+RAMB36 async control check  
+The RAMB36E1 RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[14] (net: RADPC_01/REACH_00/MMU_01/DMEM_00/FLIP_DMEM_BITS.MEM_CELL_00/ADDRBWRADDR[11]) which is driven by a register (RADPC_01/REACH_00/CTRL_UNIT_01/FSM_sequential_r_cur_state_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[10] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[6]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[7]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[4] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[0]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[5] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[1]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[6] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[2]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[7] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[3]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[8] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[4]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRARDADDR[9] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg_0[5]) which is driven by a register (RADPC_01/BOOTROM_SCRUBBER_01/MEM_ADDR_CNT_00/r_count_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg has an input control pin RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/v_RAM_reg/ADDRBWRADDR[11] (net: RADPC_01/REACH_00/MMU_01/BOOTROM_00/MEM_CELL_00/ADDRBWRADDR[7]) which is driven by a register (RADPC_01/REACH_00/PC_01/r_pc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+

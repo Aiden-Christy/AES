@@ -209,7 +209,7 @@ begin
 						o_data_G <= (others => '0');
 						o_data_H <= (others => '0');
 
-						o_hwa_stat <= "00000000";
+						o_hwa_stat <= "0000000000000000";
 					when "00000001" =>
 
 						plaintext_in <= i_data_A & i_data_B & i_data_C & i_data_D;
@@ -223,7 +223,7 @@ begin
 
 						o_data_H(1 downto 0) <= out_valid_e & key_valid_e;
 
-						o_hwa_stat <= "00000001";
+						o_hwa_stat <= "0000000000000001";
 					when "00000010" =>
 
 						ciphertext_in <= i_data_A & i_data_B & i_data_C & i_data_D;
@@ -237,7 +237,7 @@ begin
 
 						o_data_H(1 downto 0) <= out_valid_d & key_valid_d;
 
-						o_hwa_stat <= "00000010";
+						o_hwa_stat <= "0000000000000010";
 					when others =>
 						o_data_A <= (others => '0');
 						o_data_B <= (others => '0');
@@ -248,7 +248,7 @@ begin
 						o_data_G <= (others => '0');
 						o_data_H <= (others => '0');
 
-						o_hwa_stat <= "11111111";
+						o_hwa_stat <= "1111111111111111";
 				end case;
 			end if;
 		end if;
