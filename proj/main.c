@@ -95,7 +95,7 @@ int main(){
                         rpc_printf(0, "0x%x 0x%x 0x%x 0x%x", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
                 }
 
-                if(UART_00_RX_BUFF & UART_00_RX_STAT){
+                if(UART_00_RX_BUFF & BIT_0){
                         char c = UART_00_RX_BUFF;
 
                         if(c == 'e') {
