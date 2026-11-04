@@ -91,17 +91,21 @@ int main(){
                 // Delay before resuming loop
                 delay( del_val );
 
-                //if(UART_00_RX_BUFF & UART_00_RX_STAT){
-                //        char c = UART_00_RX_BUFF;
+                if (HWA_READ_07 & AES_OUT_VALID) {
+                        rpc_printf(0, "0x%x 0x%x 0x%x 0x%x", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                }
 
-                //        if(c == 'e') {
-                //                HWA_CTRL = AES_ENCRYPT;
-                //        }else if(c == 'd'){
-                //                HWA_CTRL = AES_DECRYPT;
-                //        }else{
-                //                HWA_CTRL = AES_IDLE;
-                //        }
-                //}
+                if(UART_00_RX_BUFF & UART_00_RX_STAT){
+                        char c = UART_00_RX_BUFF;
+
+                        if(c == 'e') {
+                                HWA_CTRL = AES_ENCRYPT;
+                        }else if(c == 'd'){
+                                HWA_CTRL = AES_DECRYPT;
+                        }else{
+                                HWA_CTRL = AES_IDLE;
+                        }
+                }
                 
         };
 
