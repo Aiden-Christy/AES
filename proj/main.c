@@ -92,7 +92,7 @@ int main(){
                 delay( del_val );
 
                 if (HWA_READ_07 & AES_OUT_VALID) {
-                        rpc_printf(0, "0x%x 0x%x 0x%x 0x%x", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                        rpc_printf(0, "0x%x 0x%x 0x%x 0x%x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
                 }
 
                 if(UART_00_RX_BUFF & BIT_0){
