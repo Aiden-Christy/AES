@@ -145,7 +145,7 @@ int main(){
                                 {
                                 while(state == 2){
                                         if (HWA_READ_07 & AES_OUT_VALID) {
-                                                rpc_printf(0, "\r\n0x%08x 0x%08x 0x%08x 0x%08x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                                                rpc_printf(0, "\r\n0x%x 0x%x 0x%x 0x%x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
                                                 state = 0;
                                                 HWA_CTRL = AES_IDLE;
                                                 HWA_CTRL = 0;
