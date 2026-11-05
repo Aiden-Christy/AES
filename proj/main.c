@@ -71,11 +71,92 @@ int main(){
         // before starting sleep to wait for key expansion
         delay(1000);
 
-        HWA_CTRL = AES_DECRYPT;
+        HWA_CTRL = AES_IDLE;
+
+        int state = 0; 
+        // 0 is idle
+        // 1 is read in plaintext/ciphertext
+        // 2 is print the output and go back to idle
 
         // Infinite loop
         while(1) {
 
+                switch (state){
+                        case 0: 
+                                {
+                                rpc_printf(0, "type 'e' for encryption or 'd' for decryption\n\r");
+                                while (state == 0)
+                                {
+                                        if(UART_00_RX_STAT & BIT_0){
+                                                char c = UART_00_RX_BUFF;
+                                                if(c == 'e'){
+                                                        rpc_printf(0, "Provide Value to encrypt(128 bit Hex): ");
+                                                        state = 1;
+                                                        HWA_CTRL = AES_ENCRYPT;
+                                                }else if(c == 'd'){
+                                                        rpc_printf(0, "Provide Value to decrypt(128 bit Hex): ");
+                                                        state = 1;
+                                                        HWA_CTRL = AES_DECRYPT;
+                                                }else{
+                                                        //do nothing
+                                                }
+                                        }
+                                }
+                                break;
+                        }
+                        case 1:
+                                {
+                                uint32_t blk[4] = {0,0,0,0};
+                                int n = 0;
+
+                                while(n < 32){
+                                        if(UART_00_RX_STAT & BIT_0){
+                                                char c = UART_00_RX_BUFF;
+                                                int v;
+
+                                                if(c >= '0' && c <= '9'){
+                                                        v = c - '0';
+                                                }else if(c >= 'a' && c <= 'f'){
+                                                        v = c - 'a' + 10;
+                                                }else if(c >= 'A' && c <= 'F'){
+                                                        v = c - 'A' = 10;
+                                                }else{
+                                                        continue;
+                                                }
+
+                                                blk[n / 8] = (blk[n/8] << 4) | v;
+                                                n++;
+                                        }
+                                }
+
+                                HWA_WRITE_00 = blk[0];
+                                HWA_WRITE_01 = blk[1];
+                                HWA_WRITE_02 = blk[2];
+                                HWA_WRITE_03 = blk[3];
+
+                                HWA_WRITE_07 = AES_IN_VALID;
+                                state = 2;
+                                break;
+                        }
+                        case 2:
+                                {
+                                while(state == 2){
+                                        if (HWA_READ_07 & AES_OUT_VALID) {
+                                                rpc_printf(0, "\r\n0x%08x 0x%08x 0x%08x 0x%08x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                                                state = 0;
+                                                HWA_CTRL = AES_IDLE;
+                                                HWA_CTRL = 0;
+                                        }                      
+                                }
+                        break;
+                        }
+                                
+                }
+
+
+
+
+                /*
                 uint32_t pt[4] =  {0xF3EED1BD, 0xB5D2A03C, 0x64B5A7E, 0x3DB181F8};
                 
                 HWA_WRITE_00 = pt[0];
@@ -106,6 +187,8 @@ int main(){
                                 HWA_CTRL = AES_IDLE;
                         }
                 }
+
+                */
                 
         };
 
