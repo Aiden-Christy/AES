@@ -81,6 +81,15 @@ int main(){
         // Infinite loop
         while(1) {
 
+                rpc_printf(0, "stat: 0x%x\r\n", UART_00_RX_STAT);
+if (UART_00_RX_STAT & BIT_0) {
+        char c = UART_00_RX_BUFF;
+        rpc_printf(0, "got 0x%x, stat after read: 0x%x\r\n", c, UART_00_RX_STAT);
+}
+delay(500);
+
+
+                /*
                 switch (state){
                         case 0: 
                                 {
@@ -152,7 +161,7 @@ int main(){
                         }
                                 
                 }
-
+*/
 
 
 
