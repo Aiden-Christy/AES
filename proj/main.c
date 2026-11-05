@@ -119,7 +119,7 @@ int main(){
                                                 }else if(c >= 'a' && c <= 'f'){
                                                         v = c - 'a' + 10;
                                                 }else if(c >= 'A' && c <= 'F'){
-                                                        v = c - 'A' = 10;
+                                                        v = c - 'A' + 10;
                                                 }else{
                                                         continue;
                                                 }

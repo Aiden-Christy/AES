@@ -15,6 +15,8 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .sdata.del_val
+                0x00000000        0x4 main.o
  .text          0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
  .data          0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
  .bss           0x00000000        0x0 /opt/radpc/drivers/lib/csr.o
@@ -131,41 +133,41 @@ LOAD /opt/radpc/drivers/lib/radpc.o
                 0x00000000                _start
  *(.text.exit)
 
-.text           0x10000000       0x28
+.text           0x10000000       0xa0
  *(.text)
  *(.rodata)
- .rodata        0x10000000       0x28 main.o
-                0x10000028                        __end_text = .
+ .rodata        0x10000000       0xa0 main.o
+                0x100000a0                        __end_text = .
 
-.text.main      0x10000028      0x264
- .text.main     0x10000028      0x264 main.o
-                0x10000028                main
+.text.main      0x100000a0      0x3f0
+ .text.main     0x100000a0      0x3f0 main.o
+                0x100000a0                main
 
 .text.interrupt
-                0x1000028c       0x24
+                0x10000490       0x24
  .text.interrupt
-                0x1000028c       0x24 main.o
-                0x1000028c                interrupt
+                0x10000490       0x24 main.o
+                0x10000490                interrupt
 
-.text.delay     0x100002b0       0x6c
- .text.delay    0x100002b0       0x6c /opt/radpc/drivers/lib/radpc.o
-                0x100002b0                delay
+.text.delay     0x100004b4       0x6c
+ .text.delay    0x100004b4       0x6c /opt/radpc/drivers/lib/radpc.o
+                0x100004b4                delay
 
 .text.uart_tx_byte
-                0x1000031c      0x114
+                0x10000520      0x114
  .text.uart_tx_byte
-                0x1000031c      0x114 /opt/radpc/drivers/lib/radpc.o
-                0x1000031c                uart_tx_byte
+                0x10000520      0x114 /opt/radpc/drivers/lib/radpc.o
+                0x10000520                uart_tx_byte
 
 .text.rpc_printf
-                0x10000430      0x2fc
+                0x10000634      0x2fc
  .text.rpc_printf
-                0x10000430      0x2fc /opt/radpc/drivers/lib/radpc.o
-                0x10000430                rpc_printf
+                0x10000634      0x2fc /opt/radpc/drivers/lib/radpc.o
+                0x10000634                rpc_printf
 
-.rela.dyn       0x1000072c        0x0
+.rela.dyn       0x10000930        0x0
  .rela.text.bootload
-                0x1000072c        0x0 /opt/radpc/drivers/lib/crt0.o
+                0x10000930        0x0 /opt/radpc/drivers/lib/crt0.o
 
 .data           0x20000000        0x0
                 0x20000000                        __start_data = .
@@ -173,19 +175,14 @@ LOAD /opt/radpc/drivers/lib/radpc.o
  *(.sdata)
                 0x20000000                        __end_data = .
 
-.sdata.del_val  0x20000000        0x4
- .sdata.del_val
-                0x20000000        0x4 main.o
-                0x20000000                del_val
-
-.data.digits.0  0x20000004       0x11
+.data.digits.0  0x20000000       0x11
  .data.digits.0
-                0x20000004       0x11 /opt/radpc/drivers/lib/radpc.o
+                0x20000000       0x11 /opt/radpc/drivers/lib/radpc.o
 
-.bss            0x20000015        0x0
-                0x20000015                        __start_bss = .
+.bss            0x20000011        0x0
+                0x20000011                        __start_bss = .
  *(.bss)
-                0x20000015                        __end_bss = .
+                0x20000011                        __end_bss = .
                 [!provide]                        PROVIDE (__start_bootrom = ORIGIN (BOOTROM))
                 [!provide]                        PROVIDE (__end_bootrom = (ORIGIN (BOOTROM) + LENGTH (BOOTROM)))
                 0x10000000                        PROVIDE (__start_imem = ORIGIN (IMEM))
