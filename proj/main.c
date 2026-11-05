@@ -73,6 +73,8 @@ int main(){
 
         HWA_CTRL = AES_IDLE;
 
+        char line[80];
+
         int state = 0; 
         // 0 is idle
         // 1 is read in plaintext/ciphertext
@@ -80,62 +82,54 @@ int main(){
 
         // Infinite loop
         while(1) {
-
-                rpc_printf(0, "stat: 0x%x\r\n", UART_00_RX_STAT);
-if (UART_00_RX_STAT & BIT_0) {
-        char c = UART_00_RX_BUFF;
-        rpc_printf(0, "got 0x%x, stat after read: 0x%x\r\n", c, UART_00_RX_STAT);
-}
-delay(500);
-
-
-                /*
+                
                 switch (state){
                         case 0: 
                                 {
-                                rpc_printf(0, "type 'e' for encryption or 'd' for decryption\n\r");
-                                while (state == 0)
-                                {
-                                        if(UART_00_RX_STAT & BIT_0){
-                                                char c = UART_00_RX_BUFF;
-                                                if(c == 'e'){
-                                                        rpc_printf(0, "Provide Value to encrypt(128 bit Hex): ");
-                                                        state = 1;
-                                                        HWA_CTRL = AES_ENCRYPT;
-                                                }else if(c == 'd'){
-                                                        rpc_printf(0, "Provide Value to decrypt(128 bit Hex): ");
-                                                        state = 1;
-                                                        HWA_CTRL = AES_DECRYPT;
-                                                }else{
-                                                        //do nothing
-                                                }
-                                        }
+                                rpc_printf(0, "\r\ntype 'e' for encryption or 'd' for decryption: ");
+                                rpc_fgets(0, line, sizeof(line));
+
+                                if (line[0] == 'e') {
+                                        HWA_CTRL = AES_ENCRYPT;
+                                        rpc_printf(0, "\r\nProvide value to encrypt (128 bit hex): ");
+                                        state = 1;
+                                } else if (line[0] == 'd') {
+                                        HWA_CTRL = AES_DECRYPT;
+                                        rpc_printf(0, "\r\nProvide value to decrypt (128 bit hex): ");
+                                        state = 1;
                                 }
-                                break;
+                        break;
                         }
+
                         case 1:
                                 {
                                 uint32_t blk[4] = {0,0,0,0};
                                 int n = 0;
+                                int i;
 
-                                while(n < 32){
-                                        if(UART_00_RX_STAT & BIT_0){
-                                                char c = UART_00_RX_BUFF;
-                                                int v;
+                                rpc_fgets(0, line, sizeof(line));
 
-                                                if(c >= '0' && c <= '9'){
-                                                        v = c - '0';
-                                                }else if(c >= 'a' && c <= 'f'){
-                                                        v = c - 'a' + 10;
-                                                }else if(c >= 'A' && c <= 'F'){
-                                                        v = c - 'A' + 10;
-                                                }else{
-                                                        continue;
-                                                }
-
-                                                blk[n / 8] = (blk[n/8] << 4) | v;
-                                                n++;
-                                        }
+                                for (i = 0; line[i] != '\0' && n < 32; i++) {
+                                        char c = line[i];
+                                        int v;
+                                
+                                        if(c >= '0' && c <= '9'){
+                                                v = c - '0';
+                                        }else if(c >= 'a' && c <= 'f'){
+                                                v = c - 'a' + 10;
+                                        }else if(c >= 'A' && c <= 'F'){
+                                                v = c - 'A' + 10;
+                                        }else continue;
+                                                                
+                                        blk[n / 8] = (blk[n / 8] << 4) | v;
+                                        n++;
+                                }
+                        
+                                if (n < 32) {
+                                        rpc_printf(0, "\r\nNeed 32 hex digits, got %d\r\n", n);
+                                        HWA_CTRL = AES_IDLE;
+                                        state = 0;
+                                        break;
                                 }
 
                                 HWA_WRITE_00 = blk[0];
@@ -161,7 +155,7 @@ delay(500);
                         }
                                 
                 }
-*/
+
 
 
 
