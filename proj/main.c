@@ -102,17 +102,17 @@ int main(){
                         case 0: 
                                 {
                                 // RPC UART print and get function
-                                rpc_printf(0, "\r\ntype 'e' for encryption or 'd' for decryption: ");
+                                custom_printf(0, "\r\ntype 'e' for encryption or 'd' for decryption: ");
                                 rpc_fgets(0, line, sizeof(line));
 
                                 // Check to see if the line typed in by user contains a 'e' or 'd' as the first letter
                                 if (line[0] == 'e') {
                                         HWA_CTRL = AES_ENCRYPT; // Set the core to encryption mode
-                                        rpc_printf(0, "\r\nProvide value to encrypt (128 bit hex): ");
+                                        custom_printf(0, "\r\nProvide value to encrypt (128 bit hex): ");
                                         state = 1; // Move onto next state
                                 } else if (line[0] == 'd') {
                                         HWA_CTRL = AES_DECRYPT; // set the core to decryption mode
-                                        rpc_printf(0, "\r\nProvide value to decrypt (128 bit hex): ");
+                                        custom_printf(0, "\r\nProvide value to decrypt (128 bit hex): ");
                                         state = 1; // move onto next state
                                 }
                         break;
@@ -144,7 +144,7 @@ int main(){
                                 }
                         
                                 if (n < 32) { // check to see if the input line was too short
-                                        rpc_printf(0, "\r\nNeed 32 hex digits, got %d\r\n", n);
+                                        custom_printf(0, "\r\nNeed 32 hex digits, got %d\r\n", n);
                                         HWA_CTRL = AES_IDLE;
                                         state = 0;
                                         break;
@@ -169,7 +169,7 @@ int main(){
                                 while(state == 2){
                                         if (HWA_READ_07 & AES_OUT_VALID) {
                                                 // print the output value
-                                                rpc_printf(0, "\r\n0x%x%x%x%x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
+                                                custom_printf(0, "\r\n0x%08x%08x%08x%08x\r\n", HWA_READ_00, HWA_READ_01, HWA_READ_02, HWA_READ_03);
                                                 
                                                 // move back to idle state
                                                 state = 0;
@@ -207,3 +207,91 @@ void interrupt() {
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 //  END OF CODE
+
+
+void custom_printf( int p, char * format, ... ) {
+    int buff = 50;
+    unsigned int arg_val;
+    unsigned int val;
+    static char digits[] = "0123456789ABCDEF";
+    char buffer[buff];
+    char arg_str;
+    char *traverse;
+    va_list arg;
+    va_start( arg, format );
+
+    for( traverse = format; *traverse != '\0'; traverse++ ) {
+        if( *traverse != '%' ) {
+            uart_tx_byte( *traverse, p );
+        } else {
+            traverse++;
+            buff = 50;
+
+            // --- Parse optional leading zero and width specifier ---
+            char pad_char = ' ';
+            int pad_width = 0;
+
+            if( *traverse == '0' ) {
+                pad_char = '0';
+                traverse++;
+            }
+
+            while( *traverse >= '0' && *traverse <= '9' ) {
+                pad_width = pad_width * 10 + ( *traverse - '0' );
+                traverse++;
+            }
+            // ------------------------------------------------------
+
+            switch( *traverse ) {
+                case 'c' :
+                    arg_str = va_arg( arg, int );
+                    uart_tx_byte( (uint8_t) arg_str, p );
+                    break;
+
+                case 'x' :
+                    arg_val = va_arg( arg, unsigned int );
+                    do {
+                        val = arg_val & 15;
+                        buff--;
+                        buffer[ buff ] = digits[ val ];
+                        arg_val >>= 4;
+                    } while( arg_val != 0 );
+
+                    // Pad with pad_char up to pad_width
+                    while( (50 - buff) < pad_width ) {
+                        buff--;
+                        buffer[ buff ] = pad_char;
+                    }
+
+                    for( int i = buff; i < 50; i++ ) {
+                        uart_tx_byte( buffer[i], p );
+                    }
+                    break;
+
+                case 'o' :
+                    arg_val = va_arg( arg, unsigned int );
+                    do {
+                        val = arg_val & 7;
+                        buff--;
+                        buffer[ buff ] = digits[ val ];
+                        arg_val >>= 3;
+                    } while( arg_val != 0 );
+
+                    // Pad with pad_char up to pad_width
+                    while( (50 - buff) < pad_width ) {
+                        buff--;
+                        buffer[ buff ] = pad_char;
+                    }
+
+                    for( int i = buff; i < 50; i++ ) {
+                        uart_tx_byte( buffer[i], p );
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+    va_end( arg );
+}
