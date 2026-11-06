@@ -32,7 +32,7 @@
 
 int del_val = 1000;                                     // Delay Value
 
-
+void custom_printf( int p, char * format, ... );
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 // Known plaintext and its output from the current key (as of 11/5)
